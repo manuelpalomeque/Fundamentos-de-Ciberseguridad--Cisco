@@ -134,7 +134,8 @@ NEclients.txt
         Ambos Hash coinciden
 
 2-1-f) El archivo que ha sido manipulado y tiene un hash incorrecto es :
-        
+
+    I)        
         NWclients.txt
 
         Name|Zip Code|Email|Pin #
@@ -168,3 +169,38 @@ NEclients.txt
         FileName | NWclients.txt | Hash| 2c77ff70d5f7a2a720d231617157faa4
         
         NO COINCIDEN
+
+    II)
+        FileName | Nclients.txt | Hash| 8040e56207aab9dd331566b79dca37dd
+        
+        Name|Email|Company|Zip Code
+        
+        Grant K. Dyer|mattis.semper.dui@luctusut.edu|Est Foundation|I9Z 9AZ
+        Tamekah O. Petty|odio.Phasellus.at@magnatellusfaucibus.co.uk|Posuere Cubilia Limited|45-937
+        Adam H. Buck|sagittis@enim.edu|Pede Blandit Congue Company|647129
+        Calvin V. Hays|elit.a@vitaedolor.net|Nunc Nulla Vulputate LLP|00078
+        Zane Casey|luctus@mauris.com|Iaculis Incorporated|72240
+        Rudyard W. Dalton|lorem@Nuncullamcorpervelit.co.uk|Auctor Nunc PC|626714
+        Lamar Q. Allen|aliquet@sagittisNullamvitae.org|Et Rutrum Corp.|44736
+        Michelle Sloan|dolor.sit.amet@seddictum.edu|Nisi PC|00312
+        Haley E. Bass|nec@eu.com|Lorem Associates|00079
+        Larissa G. Swanson|vulputate@diamnuncullamcorper.com|Ut Limited|0626QT
+        
+        cisco@labvm:~$ echo -n 'Name|Email|Company|Zip Code
+        > 
+        > Grant K. Dyer|mattis.semper.dui@luctusut.edu|Est Foundation|I9Z 9AZ
+        > Tamekah O. Petty|odio.Phasellus.at@magnatellusfaucibus.co.uk|Posuere Cubilia Limited|45-937
+        > Adam H. Buck|sagittis@enim.edu|Pede Blandit Congue Company|647129
+        > Calvin V. Hays|elit.a@vitaedolor.net|Nunc Nulla Vulputate LLP|00078
+        > Zane Casey|luctus@mauris.com|Iaculis Incorporated|72240
+        > Rudyard W. Dalton|lorem@Nuncullamcorpervelit.co.uk|Auctor Nunc PC|626714
+        > Lamar Q. Allen|aliquet@sagittisNullamvitae.org|Et Rutrum Corp.|44736
+        > Michelle Sloan|dolor.sit.amet@seddictum.edu|Nisi PC|00312
+        > Haley E. Bass|nec@eu.com|Lorem Associates|00079
+        > Larissa G. Swanson|vulputate@diamnuncullamcorper.com|Ut Limited|0626QT' | md5sum
+        b65a3767afe4db203a52c8a50f87f434  -
+        
+        NO COINCIDEN
+    
+    III)    
+    
