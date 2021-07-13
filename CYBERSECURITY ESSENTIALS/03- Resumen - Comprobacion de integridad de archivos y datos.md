@@ -132,3 +132,39 @@ NEclients.txt
         4dff78485308281b339bfda9236eda45
         
         Ambos Hash coinciden
+
+2-1-f) El archivo que ha sido manipulado y tiene un hash incorrecto es :
+        
+        NWclients.txt
+
+        Name|Zip Code|Email|Pin #
+        
+        Stuart M. Barnes|3930|aliquam.iaculis.lacus@nec.ca|6893
+        Tanya X. Sharp|5990|risus@ornare.co.uk|9285
+        Cheyenne Garza|1493|Quisque.porttitor.eros@nec.com|2664
+        Dolan Yates|7991WA|est@Fuscediamnunc.org|3437
+        Hiroko Fleming|394867|Integer.in.magna@ac.co.uk|1880
+        Brennan Whitney|10539|consectetuer.adipiscing.elit@Pellentesque.net|8600
+        Kylan Z. Armstrong|53563-945|aliquam.iaculis.lacus@fringillaornareplacerat.ca|8698
+        Peter G. Molina|26924|diam.dictum.sapien@sem.ca|3340
+        Deborah Sanders|36376|ac@rutrum.net|9711
+        Brett Travis|23-060|imperdiet.erat@Nuncsed.ca|2883
+        
+        
+        cisco@labvm:~$ echo -n 'Name|Zip Code|Email|Pin #
+        > 
+        > Stuart M. Barnes|3930|aliquam.iaculis.lacus@nec.ca|6893
+        > Tanya X. Sharp|5990|risus@ornare.co.uk|9285
+        > Cheyenne Garza|1493|Quisque.porttitor.eros@nec.com|2664
+        > Dolan Yates|7991WA|est@Fuscediamnunc.org|3437
+        > Hiroko Fleming|394867|Integer.in.magna@ac.co.uk|1880
+        > Brennan Whitney|10539|consectetuer.adipiscing.elit@Pellentesque.net|8600
+        > Kylan Z. Armstrong|53563-945|aliquam.iaculis.lacus@fringillaornareplacerat.ca|8698
+        > Peter G. Molina|26924|diam.dictum.sapien@sem.ca|3340
+        > Deborah Sanders|36376|ac@rutrum.net|9711
+        > Brett Travis|23-060|imperdiet.erat@Nuncsed.ca|2883' | md5sum
+        13d2c0f0d00fcc3dc4d703f9694089f5  -
+        
+        FileName | NWclients.txt | Hash| 2c77ff70d5f7a2a720d231617157faa4
+        
+        NO COINCIDEN
