@@ -202,5 +202,35 @@ NEclients.txt
         
         NO COINCIDEN
     
-    III)    
-    
+    III)
+        FileName | SEclients.txt | Hash| 520eb6c72cc2574decb731bc6230e223
+        
+        Name|Zip Code|Email|Pin #
+        
+        Germane Rutledge|60600|id.ante@etrutrum.ca|4782
+        Alyssa Chandler|4001ZA|bibendum.sed.est@ultricesaauctor.org|3118
+        Erica Burt|76167|laoreet.posuere@ut.edu|6627
+        Iona Norton|69003|elit.pharetra.ut@aliquamiaculis.com|2558
+        Joel Mcmahon|27979|iaculis.nec@nuncac.edu|9863
+        Ira Raymond|70129-554|eget.odio.Aliquam@in.com|9881
+        Ivory Acevedo|59-454|vitae.sodales.at@Donectempor.org|1843
+        Willa X. Bridges|399542|nascetur.ridiculus.mus@lobortismaurisSuspendisse.com|7776
+        Kimberly Garcia|37334|imperdiet.ornare@magna.org|1239
+        Ethan Thornton|49438|penatibus@egetdictumplacerat.net|8090
+        
+        cisco@labvm:~$ echo -n 'Name|Zip Code|Email|Pin #
+        > 
+        > Germane Rutledge|60600|id.ante@etrutrum.ca|4782
+        > Alyssa Chandler|4001ZA|bibendum.sed.est@ultricesaauctor.org|3118
+        > Erica Burt|76167|laoreet.posuere@ut.edu|6627
+        > Iona Norton|69003|elit.pharetra.ut@aliquamiaculis.com|2558
+        > Joel Mcmahon|27979|iaculis.nec@nuncac.edu|9863
+        > Ira Raymond|70129-554|eget.odio.Aliquam@in.com|9881
+        > Ivory Acevedo|59-454|vitae.sodales.at@Donectempor.org|1843
+        > Willa X. Bridges|399542|nascetur.ridiculus.mus@lobortismaurisSuspendisse.com|7776
+        > Kimberly Garcia|37334|imperdiet.ornare@magna.org|1239
+        > Ethan Thornton|49438|penatibus@egetdictumplacerat.net|8090' | md5sum
+        9f322750d74bab2e5c493d13e68598e0  -
+        
+        NO COINCIDEN  
+
