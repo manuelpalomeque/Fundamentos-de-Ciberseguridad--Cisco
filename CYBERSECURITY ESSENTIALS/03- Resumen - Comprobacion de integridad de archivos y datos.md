@@ -234,3 +234,54 @@ NEclients.txt
         
         NO COINCIDEN  
 
+1-3 )Escalar el ciberataque a la supervisora de Mike, Sally.  Ingresar "ftp hq.corp" para conectarse al servidor FTP 
+de HQ, luego descargar los archivos que resultaron haber sido manipulado.
+
+        C:\>ftp hq.corp
+        Trying to connect...hq.corp
+        Connected to hq.corp
+        220- Welcome to PT Ftp server
+        Username:sally
+        331- Username ok, need password
+        Password:
+        230- Logged in
+        (passive mode On)
+        ftp>dir
+        
+        Listing /ftp directory from hq.corp: 
+        0   : NEclients.txt                                      582
+        1   : NWclients.txt                                      583
+        2   : Nclients.txt                                       698
+        3   : SEclients.txt                                      597
+        4   : SWclients.txt                                      649
+        5   : Sclients.txt                                       780
+        
+        ftp>get NWclients.txt
+        
+        Reading file NWclients.txt from hq.corp: 
+        File transfer in progress...
+        
+        [Transfer complete - 583 bytes]
+        
+        583 bytes copied in 0.042 secs (13880 bytes/sec)
+        ftp>get Nclients.txt
+        
+        Reading file Nclients.txt from hq.corp: 
+        File transfer in progress...
+        
+        [Transfer complete - 698 bytes]
+        
+        698 bytes copied in 0.031 secs (22516 bytes/sec)
+        ftp>get SEclients.txt
+        
+        Reading file SEclients.txt from hq.corp: 
+        File transfer in progress...
+        
+        [Transfer complete - 597 bytes]
+        
+        597 bytes copied in 0.065 secs (9184 bytes/sec)
+        ftp>quit
+        
+        221- Service closing control connection.
+        C:\>
+
