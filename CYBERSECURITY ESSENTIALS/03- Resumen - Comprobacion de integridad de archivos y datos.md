@@ -234,7 +234,7 @@ NEclients.txt
         
         NO COINCIDEN  
 
-1-3 )Escalar el ciberataque a la supervisora de Mike, Sally.  Ingresar "ftp hq.corp" para conectarse al servidor FTP 
+1-3) Escalar el ciberataque a la supervisora de Mike, Sally.  Ingresar "ftp hq.corp" para conectarse al servidor FTP 
 de HQ, luego descargar los archivos que resultaron haber sido manipulado.
 
         C:\>ftp hq.corp
@@ -285,3 +285,15 @@ de HQ, luego descargar los archivos que resultaron haber sido manipulado.
         221- Service closing control connection.
         C:\>
 
+1-3-f) Verificar que los archivos manipulados esten ahora en HQ-Laptop-1 para que Sally lo analice en el futuro.
+
+        C:\>dir
+         
+         Volume in drive C has no label.
+         Volume Serial Number is 5E12-4AF3
+         Directory of C:\
+        
+        12/31/1969  21:0 PM            583       NWclients.txt       
+        12/31/1969  21:0 PM            698       Nclients.txt        
+        12/31/1969  21:0 PM            597       SEclients.txt       
+                        1878 bytes          3 File(s)    
