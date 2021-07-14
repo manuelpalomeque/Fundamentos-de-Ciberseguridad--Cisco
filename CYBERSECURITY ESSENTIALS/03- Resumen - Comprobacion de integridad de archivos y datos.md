@@ -234,7 +234,7 @@ NEclients.txt
         
         NO COINCIDEN  
 
-1-3) Escalar el ciberataque a la supervisora de Mike, Sally.  Ingresar "ftp hq.corp" para conectarse al servidor FTP 
+2-3) Escalar el ciberataque a la supervisora de Mike, Sally.  Ingresar "ftp hq.corp" para conectarse al servidor FTP 
 de HQ, luego descargar los archivos que resultaron haber sido manipulado.
 
         C:\>ftp hq.corp
@@ -285,7 +285,7 @@ de HQ, luego descargar los archivos que resultaron haber sido manipulado.
         221- Service closing control connection.
         C:\>
 
-1-3-f) Verificar que los archivos manipulados esten ahora en HQ-Laptop-1 para que Sally lo analice en el futuro.
+2-3-f) Verificar que los archivos manipulados esten ahora en HQ-Laptop-1 para que Sally lo analice en el futuro.
 
         C:\>dir
          
@@ -296,4 +296,42 @@ de HQ, luego descargar los archivos que resultaron haber sido manipulado.
         12/31/1969  21:0 PM            583       NWclients.txt       
         12/31/1969  21:0 PM            698       Nclients.txt        
         12/31/1969  21:0 PM            597       SEclients.txt       
-                        1878 bytes          3 File(s)    
+                        1878 bytes          3 File(s)   
+
+3-b) Verificar que el archivo income.txt, este en la PC de Bob. Abrirlo y cipiar su contenido
+
+        INCOME 
+        2016
+        2015
+        $
+        $
+        Subscriptions
+        4200
+        3150
+        Advertising
+        11000
+        7000
+        Donations
+        2000
+        5500
+        Entry fees from annual show
+        1000
+        1000
+        General fundraising
+        4000
+        4300
+        Interest
+        1000
+        2000
+        Total income 
+        22,000
+        22,450
+
+3-h) Usar el siguiente comando para crear un HMAC para el archivo income.txt. La clave secreta es cisco123.
+
+
+        cisco@labvm:~$ openssl dgst -sha256 -hmac cisco123 income.txt 
+        HMAC-SHA256(income.txt)= b138706cb55787d2a01934b224edad32203f87470ff6c7ffb9bd126786d1830d
+
+¿Por qué el uso de HMAC es más seguro que el hashing general?
+Para producir un hash específico, necesita tanto el mensaje original como una clave secreta.
