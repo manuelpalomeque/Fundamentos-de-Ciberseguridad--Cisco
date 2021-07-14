@@ -12,3 +12,8 @@ locales para determinar vulnerabilidades potenciales, incluidos los puertos abie
 Verifique la integridad de varios archivos usando hash para garantizar que los archivos
 no han sido manipulados. Ante la sospecha de que algún archivo ha sido manipulado, los envié a Sally.
 
+#### **_d) Explore el cifrado de archivos y datos:_**
+Accedi al contenido cifrado de varios archivos y transferi un archivo a un
+servidor FTP. Luego, desde otro usuario, descargué el archivo del servidor FTP y descifré el
+contenido del archivo. Para descifrar texto y archivos en esta actividad, utilicé OpenSSL.
+
