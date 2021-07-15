@@ -18,6 +18,8 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
       03- Comprobaciones de integridad de archivos y datos
       04- Explore el cifrado de archivos y datos
       05- Configurar el control de acceso
+      06- Configurar Autentificacion y Autorizacion en Linux
+
 
 
 
