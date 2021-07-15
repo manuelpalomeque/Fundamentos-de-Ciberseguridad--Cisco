@@ -217,3 +217,45 @@ get descargar el archivo clientinfo.enc en la pc de Bob.
 
     The decryption key is cisco123
 
+5-2-c) Abrir el archivo clientinfo.enc y copiar su contenido
+
+    U2FsdGVkX18uOvzW5lbgXcN7n3Z6qGIl+NcIpjbahVETpECh5F/Qi1mOSwSxF41V
+    8zpmxPUXAINw9rPjst1K7AbghYhkVqsqIWVRHIqaBteBoFbk5+kZ2UWm8aMLjRt8
+    qYIcwSSpCQbyEdOlKdVQrm9dTqHLf36Cg94Q7e+BZtH4HuGHp1MrkpG8MNVNcTjk
+    r7D3d0sNaJzELETwlRCy2bIo8NS3ovm9+URQJ0K1HeUwhajjHbbPTlJx9kcfSLFY
+    DR+R3HbWWHo8Kh2DC00+VBEUfi/w5hqkN5N0iZMsEGifba2vEGCvMSmx1yoXazWb
+    kcrVnluEljsgcXyyDUnBAPVqdU3/9lWlrU9cD4T85oPchXg50blfSJ6rZiK8MQ9z
+    NO9+ckZBXZs7JuvwOcfXL3KGZoPqlkwYsMi62CJivkusk49gyCcm4b35/VFnu/dZ
+    4meP6IHK2pgzkXN3Eht0l5cL43TapkADT6+gZ2V/FMsx1MDVV85WWYie6pY7V3rS
+    ST6rmDCvWwXTi3PIekj5y0yZhHopZ52B5FI0E7o/6Fw=
+
+5-2-h) En la maquina virtual verificar que el archivo clientinfo.enc este en el directorio local
+
+    cisco@labvm:~$ ls 
+    clientinfo.enc  Desktop  Documents  Downloads  income.txt  lynis
+
+5-2-k) desencriptar el archivo clientinfo.enc. Usar la contrasela descubierta anteriormente de Mary.
+Luego verificar que se haya creado el nuevo archivo en el directorio
+
+    cisco@labvm:~$ openssl aes-256-cbc -pbkdf2 -a -d -in clientinfo.enc -out clientinfo.txt 
+    enter aes-256-cbc decryption password:
+    cisco@labvm:~$ ls
+    clientinfo.enc  Desktop    Downloads   lynis
+    clientinfo.txt  Documents  income.txt
+
+5-2-l) abrir el archivo clientinfo.txt  para ver su contenido desencriptado
+
+    cisco@labvm:~$ cat clientinfo.txt
+    Name|Address|Credit Card
+    
+    Drew N. Stark|40008|532605 072104 7364
+    Laith Wilkerson|21800|516234 6483327961
+    Drew A. Dennis|33024|4716904313886
+    Genevieve Robertson|25498|491 65497 20952 457
+    Paki Parsons|419043|492954 7171363013
+    Teagan N. Avery|64416|4485 5676 5330 3713
+    Joy B. Goodman|6048TB|419978 0389706805
+    Orla L. Rowe|93081|520 88110 11661 765
+    Wynter English|1396|534047 781153 0565
+
+
