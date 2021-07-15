@@ -17,3 +17,7 @@ Accedi al contenido cifrado de varios archivos y transferi un archivo a un
 servidor FTP. Luego, desde otro usuario, descargué el archivo del servidor FTP y descifré el
 contenido del archivo. Para descifrar texto y archivos en esta actividad, utilicé OpenSSL.
 
+#### **_e) Configurar el control de acceso:_**
+Configuré la autenticación y la autorización para los servicios de red, incluido el acceso a la red inalámbrica, 
+el correo electrónico y los servicios de FTP.
+

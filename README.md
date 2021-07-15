@@ -17,4 +17,7 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
       02- Use un escáner de puertos para detectar puertos abiertos (NMAP)
       03- Comprobaciones de integridad de archivos y datos
       04- Explore el cifrado de archivos y datos
+      05- Configurar el control de acceso
+
+
 
