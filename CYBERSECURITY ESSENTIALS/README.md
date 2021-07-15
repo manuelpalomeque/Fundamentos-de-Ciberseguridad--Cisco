@@ -21,3 +21,8 @@ contenido del archivo. Para descifrar texto y archivos en esta actividad, utilic
 Configuré la autenticación y la autorización para los servicios de red, incluido el acceso a la red inalámbrica, 
 el correo electrónico y los servicios de FTP.
 
+#### **_f) Configurar Autorización y Autentificación en Linux:_**
+Utilicé la línea de comandos de Linux para crear un grupo para nuevos usuarios y agregue usuarios al grupo.
+A cada usuario se le asignó una contraseña para autenticarse al iniciar sesión. Luego modifique los permisos para
+autorizar privilegios de lectura, escritura y ejecución para usuarios y grupos.
+
