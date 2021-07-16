@@ -1,8 +1,17 @@
-    
+## 1) Crear un grupo de usuarios:
+
+a) Escalar privilegios a el nivel root, usando "password" como contraseña:
 
     cisco@labvm:~$ sudo su
     [sudo] password for cisco: 
+    root@labvm:/home/cisco#
+
+b) Agregar un nuevo grupo llamado HR:
+
     root@labvm:/home/cisco# groupadd HR
+
+c) Verificar que el nuevo grupo se agrego:
+
     root@labvm:/home/cisco# cat /etc/group
     root:x:0:
     daemon:x:1:
@@ -84,6 +93,15 @@
     Eric:x:1003:
     Xnobody:x:1004:
     HR:x:1005:
+
+El nuevo grupo HR se muestra en la parte inferior del archivo /etc/group con un ID de grupo de 1005.
+
+## 2) Agregar usuarios al nuevo grupo
+
+a) Agregar la nueva usuario Jenny:
+contraseña: jenPass
+Nombre completo: Jenny
+
     root@labvm:/home/cisco# adduser jenny
     Adding user `jenny' ...
     Adding new group `jenny' (1006) ...
@@ -101,7 +119,16 @@
         Home Phone []: 
         Other []: 
     Is the information correct? [Y/n] Y
+
+b) Mover el usuario jenny al grupo HR:
+
     root@labvm:/home/cisco# usermod -G HR jenny
+
+c)Agregar el nuevo usuario Joe:
+contraseña: joePass
+Nombre completo: Joe
+
+
     root@labvm:/home/cisco# adduser joe
     Adding user `joe' ...
     Adding new group `joe' (1007) ...
@@ -113,21 +140,19 @@
     passwd: password updated successfully
     Changing the user information for joe
     Enter the new value, or press ENTER for the default
-        Full Name []: Joe
-        Room Number []: 
-        Work Phone []: 
-        Home Phone []: \
-        Other []: 
-    Is the information correct? [Y/n] n 
-    Changing the user information for joe
-    Enter the new value, or press ENTER for the default
         Full Name [Joe]: Joe
         Room Number []: 
         Work Phone []: 
-        Home Phone [\]: 
+        Home Phone []: 
         Other []: 
     Is the information correct? [Y/n] Y
+
+d) Mover el usuario Joe al grupo HR:
+
     root@labvm:/home/cisco# usermod -G HR joe
+
+e) verificar que los usuarios fueron agregados:
+
     root@labvm:/home/cisco# cat /etc/passwd
     root:x:0:0:root:/root:/bin/bash
     daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -182,6 +207,9 @@
     Xnobody:x:1004:1004::/home/Xnobody:/bin/sh
     jenny:x:1005:1006:Jenny,,,:/home/jenny:/bin/bash
     joe:x:1006:1007:Joe,,,\:/home/joe:/bin/bash
+
+f) Ver los usuarios creados en shadows files
+
     root@labvm:/home/cisco# cat /etc/shadow
     root:!:18704:0:99999:7:::
     daemon:*:18704:0:99999:7:::
@@ -236,4 +264,6 @@
     Xnobody:!:18704:0:99999:7:::
     jenny:$6$hBtHzC3thRxOJpua$BYI.YAURxSMPirPGrCMeELDguKC8I5mEelbbY.soLxwDgBAr3UuBkRihDlf2L.4QsBWJLGsQnYA4V7CKMW4uH/:19014:0:99999:7:::
     joe:$6$fcE1KzR2WKYblqQL$0FtdhD6GFQdYtyNlC6w37HJEPAKlkHu7RrrO0JkkCOmwQ43HKjkawWZUdB9qqDjGMKsN5JqYWV32JM/Tt5dTF/:19014:0:99999:7:::
+   
+
     root@labvm:/home/cisco# 
