@@ -339,3 +339,53 @@ deniega el acceso.
     jenny@labvm:/home$ cd joe
     bash: cd: joe: Permission denied
 
+## 4) Modificar permisos en modo absoluto:
+
+a) Cambie de usuario Cisco a Jenny. Use pwd para verificar el directorio actual, luego accedi al directorio /home con 
+cd ../..
+
+    joe@labvm:~/Desktop$ pwd
+    /home/joe/Desktop
+    joe@labvm:~/Desktop$  cd ../..
+    joe@labvm:/home$ 
+
+b) Use el comando ls -l para ver los directorios, permisos y usuarios.
+
+    joe@labvm:/home$ ls -l
+    total 28
+    drwxr-xr-x  2 Alice Alice 4096 Mar 18  2021 Alice
+    drwxr-xr-x  2 Bob   Bob   4096 Mar 18  2021 Bob
+    drwxr-xr-x 10 cisco cisco 4096 Jan 22 22:39 cisco
+    drwxr-xr-x  2 Eric  Eric  4096 Mar 18  2021 Eric
+    drwxr-xr-x  2 Eve   Eve   4096 Mar 18  2021 Eve
+    drwxr-xr-x  9 jenny jenny 4096 Jan 22 23:54 jenny
+    drwxr-xr--  9 joe   joe   4096 Jan 23 00:43 joe
+
+c) Use el modo absoluto para modificar  y verificar los permisos de la carpeta de Joe
+. Modifiqué el campo "otros" para la carpeta de Joe para que otros puedan leer y ejecutar pero no escribir mientras
+aún mantiene el campo "usuario" para leer, escribir y ejecutar.
+
+    joe@labvm:/home$ chmod 705 joe
+    joe@labvm:/home$ ls -l
+    total 28
+    drwxr-xr-x  2 Alice Alice 4096 Mar 18  2021 Alice
+    drwxr-xr-x  2 Bob   Bob   4096 Mar 18  2021 Bob
+    drwxr-xr-x 10 cisco cisco 4096 Jan 22 22:39 cisco
+    drwxr-xr-x  2 Eric  Eric  4096 Mar 18  2021 Eric
+    drwxr-xr-x  2 Eve   Eve   4096 Mar 18  2021 Eve
+    drwxr-xr-x  9 jenny jenny 4096 Jan 22 23:54 jenny
+    drwx---r-x  9 joe   joe   4096 Jan 23 00:43 joe
+
+d) Cambié al directorio joe y usé el comando touch test.txt para crear un archivo y luego enumeré el contenido del
+directorio.
+
+    joe@labvm:/home$ cd joe
+    joe@labvm:~$ touch test.txt
+    joe@labvm:~$ ls -l
+    total 12
+    drwxr-xr-x 2 joe joe 4096 Jan 23 00:43 Desktop
+    drwxr-xr-x 2 joe joe 4096 Jan 23 00:43 Documents
+    drwxr-xr-x 2 joe joe 4096 Jan 23 00:43 Downloads
+    -rw-rw-r-- 1 joe joe    0 Jan 23 00:46 test.txt
+    joe@labvm:~$ 
+
