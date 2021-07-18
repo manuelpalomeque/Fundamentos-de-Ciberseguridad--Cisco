@@ -389,5 +389,32 @@ directorio.
     -rw-rw-r-- 1 joe joe    0 Jan 23 00:46 test.txt
     joe@labvm:~$ 
 
+e) Cambie al usuario jenny  y enliste el contenido del directorio /home
+
+    jenny@labvm:~/Desktop$ cd ../..
+    jenny@labvm:/home$ ls -l
+    total 28
+    drwxr-xr-x  2 Alice Alice 4096 Mar 18  2021 Alice
+    drwxr-xr-x  2 Bob   Bob   4096 Mar 18  2021 Bob
+    drwxr-xr-x 10 cisco cisco 4096 Jan 22 22:39 cisco
+    drwxr-xr-x  2 Eric  Eric  4096 Mar 18  2021 Eric
+    drwxr-xr-x  2 Eve   Eve   4096 Mar 18  2021 Eve
+    drwxr-xr-x  9 jenny jenny 4096 Jan 22 23:54 jenny
+    drwx---r-x  9 joe   joe   4096 Jan 23 01:02 joe
+
+f) Cambie a la carpera jo y enliste su contenido
+
+    jenny@labvm:/home$ cd joe
+    jenny@labvm:/home/joe$ ls -l
+    total 12
+    drwxr-xr-x 2 joe joe 4096 Jan 23 00:43 Desktop
+    drwxr-xr-x 2 joe joe 4096 Jan 23 00:43 Documents
+    drwxr-xr-x 2 joe joe 4096 Jan 23 00:43 Downloads
+    -rw-rw-r-- 1 joe joe    0 Jan 23 00:46 test.txt
+
+g) Intente crear un archivo, pero no tengo los accesos.
+
+    jenny@labvm:/home/joe$ touch jenny.txt
+    touch: cannot touch 'jenny.txt': Permission denied
 
 
