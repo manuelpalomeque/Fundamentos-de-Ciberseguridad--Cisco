@@ -389,3 +389,5 @@ directorio.
     -rw-rw-r-- 1 joe joe    0 Jan 23 00:46 test.txt
     joe@labvm:~$ 
 
+
+
