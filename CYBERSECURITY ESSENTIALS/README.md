@@ -26,3 +26,7 @@ Utilicé la línea de comandos de Linux para crear un grupo para nuevos usuarios
 A cada usuario se le asignó una contraseña para autenticarse al iniciar sesión. Luego modifique los permisos para
 autorizar privilegios de lectura, escritura y ejecución para usuarios y grupos.
 
+#### **_g) Fortalecer un sistema Linux (Lynis):_**
+Utilice Lynins, una herramienta de auditoría de seguridad para descubrir las vulnerabilidades del sistema. En base al 
+ análisis de Lynis, implemente las soluciones recomendadas para fortalecer el sistema. 
+
