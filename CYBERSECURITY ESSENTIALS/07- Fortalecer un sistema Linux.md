@@ -118,6 +118,88 @@ complementos.
     ------------------------------------
 
 b) La siguiente sección son los resultados de Lynis 3.0.3. En los resultados incluyen advertencias (que se muestran a 
-continuación). También habrá una sección con una lista de Sugerencias, que enumerará, en este caso 52.
+continuación, 2 en total). También habrá una sección con una lista de Sugerencias, que enumerará, en este caso 52.
 
+    -[ Lynis 3.0.3 Results ]-
+
+    Warnings (2):
+    ----------------------------
+    ! Found one or more vulnerable packages. [PKGS-7392] 
+      https://cisofy.com/lynis/controls/PKGS-7392/
+
+    ! iptables module(s) loaded, but no rules active [FIRE-4512] 
+      https://cisofy.com/lynis/controls/FIRE-4512/
+
+    Suggestions (52):
+    ----------------------------
+    * Version of Lynis outdated, consider upgrading to the latest version [LYNIS] 
+      https://cisofy.com/lynis/controls/LYNIS/
+
+    * Set a password on GRUB boot loader to prevent altering boot configuration (e.g. boot in single user mode without password) [BOOT-5122] 
+      https://cisofy.com/lynis/controls/BOOT-5122/
+
+    <omiti salidas para facilitar el entendimiento del practico>
+
+    ================================================================================
+
+    Lynis 3.0.3
+
+    Auditing, system hardening, and compliance for UNIX-based systems
+    (Linux, macOS, BSD, and others)
+
+    2007-2021, CISOfy - https://cisofy.com/lynis/
+    Enterprise support available (compliance, plugins, interface and tools)
+
+    ================================================================================
+
+    [TIP]: Enhance Lynis audits by adding your settings to custom.prf (see /home/cisco/Downloads/lynis/default.prf for all settings)
+
+    cisco@labvm:~/Downloads/lynis$ 
+
+## 3) Revisar los resultados del escaneo y solucionar las advertencias:
+
+a) ¿Cuántas Advertencias recibiste?
+Recibi dos advertencias
+
+    Warnings (2):
+    ----------------------------
+    ! Found one or more vulnerable packages. [PKGS-7392] 
+      https://cisofy.com/lynis/controls/PKGS-7392/
+
+    ! iptables module(s) loaded, but no rules active [FIRE-4512] 
+      https://cisofy.com/lynis/controls/FIRE-4512/
+
+¿Cuántas Sugerencias recibiste?
+Recibi 52 sugerencias
+    
+    Suggestions (52)
+
+b) Seleccione una advertencia e investigué cómo solucionar ese problema. Usando el enlace proporcionado en la salida de 
+advertencia como punto de partida. 
+¿A qué advertencia te refieres?
+
+    ! Found one or more vulnerable packages. [PKGS-7392] 
+      https://cisofy.com/lynis/controls/PKGS-7392/
+
+De la investigacion procedi a utilizar los comandos: apt-get update y apt-get upgrade, desde root
+
+    cisco@labvm:~/Downloads/lynis$ sudo apt-get update
+    Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+    Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+    Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+    Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+    Get:5 http://archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [11.1 kB]
+    Get:6 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [19.5 kB]
+    Get:7 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [13.5 kB]
+    Fetched 380 kB in 3s (149 kB/s)                               
+    Reading package lists... Done
+    cisco@labvm:~/Downloads/lynis$ sudo apt-get upgrade
+    Reading package lists... Done
+    Building dependency tree       
+    Reading state information... Done
+    Calculating upgrade... Done
+    
+    <omiti salidas para facilitar el entendimiento del practico>
+
+Ejecute Lynis nuevamente para verificar las advertencias y sugerencias:
 
