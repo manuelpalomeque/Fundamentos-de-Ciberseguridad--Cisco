@@ -13,13 +13,15 @@ https://skillsforall.com/resources/lab-downloads
 ### 👉 CYBERSECURITY ESSENTIALS:
 En la carpeta creada en este repositorio se encuentran desarrollados los siguientes laboratorios:
 
-      01- Construir una red doméstica
-      02- Use un escáner de puertos para detectar puertos abiertos (NMAP)
-      03- Comprobaciones de integridad de archivos y datos
-      04- Explore el cifrado de archivos y datos
-      05- Configurar el control de acceso
-      06- Configurar Autentificacion y Autorizacion en Linux
-      07- Fortalecer un sistema Linux
+    01- Construir una red doméstica
+    02- Use un escáner de puertos para detectar puertos abiertos (NMAP)
+    03- Comprobaciones de integridad de archivos y datos
+    04- Explore el cifrado de archivos y datos
+    05- Configurar el control de acceso
+    06- Configurar Autentificacion y Autorizacion en Linux
+    07- Fortalecer un sistema Linux (LYNIS)
+    08- Recuperar contraseñas (JOHN THE RIPPER)
+
 
 
 
