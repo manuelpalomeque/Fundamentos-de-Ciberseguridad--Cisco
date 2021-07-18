@@ -265,5 +265,77 @@ f) Ver los usuarios creados en shadows files
     jenny:$6$hBtHzC3thRxOJpua$BYI.YAURxSMPirPGrCMeELDguKC8I5mEelbbY.soLxwDgBAr3UuBkRihDlf2L.4QsBWJLGsQnYA4V7CKMW4uH/:19014:0:99999:7:::
     joe:$6$fcE1KzR2WKYblqQL$0FtdhD6GFQdYtyNlC6w37HJEPAKlkHu7RrrO0JkkCOmwQ43HKjkawWZUdB9qqDjGMKsN5JqYWV32JM/Tt5dTF/:19014:0:99999:7:::
    
+## 3) Cambiar usuarios y modificar permisos:
 
-    root@labvm:/home/cisco# 
+a) Cambie de usuario Cisco a Jenny. Use pwd para verificar el directorio actual, luego accedi al directorio /home con 
+cd ../..
+
+    jenny@labvm:~$ dir
+    Desktop  Documents  Downloads
+    jenny@labvm:~$ cd Desktop
+    jenny@labvm:~/Desktop$ pwd
+    /home/jenny/Desktop
+    jenny@labvm:~/Desktop$ cd ../..
+    jenny@labvm:/home$ 
+
+b) Use el comando ls -l para ver los directorios, permisos y usuarios.
+
+    jenny@labvm:/home$ ls -l
+    total 28
+    drwxr-xr-x  2 Alice Alice 4096 Mar 18  2021 Alice
+    drwxr-xr-x  2 Bob   Bob   4096 Mar 18  2021 Bob
+    drwxr-xr-x 10 cisco cisco 4096 Jan 22 22:39 cisco
+    drwxr-xr-x  2 Eric  Eric  4096 Mar 18  2021 Eric
+    drwxr-xr-x  2 Eve   Eve   4096 Mar 18  2021 Eve
+    drwxr-xr-x  9 jenny jenny 4096 Jan 22 23:54 jenny
+    drwxr-xr-x  2 joe   joe   4096 Jan 22 22:42 joe
+
+c) Entre a la carpeta de Joe con el comando cd, pude hacerlo porque el permiso para otros es r-x. La x permite que 
+cualquier persona ingrese al directorio.
+
+    jenny@labvm:/home$ cd joe
+    jenny@labvm:/home/joe$
+
+d) Intente crear un nuevo archivo en la carpeta de joe, pero no pude hacerlo porque no tengo los permisos para escribir 
+en la carpeta de joe.
+
+    jenny@labvm:/home/joe$ touch new.txt
+    touch: cannot touch 'new.txt': Permission denied
+
+e) Sali de la carpeta de joe e ingrese como el usuario Cisco, con la contraseña "password"
+
+    jenny@labvm:/home/joe$ cd ..
+    jenny@labvm:/home$ su cisco
+    Password: 
+    cisco@labvm:/home$
+
+f) Cambie a root
+
+    cisco@labvm:/home$ sudo -i
+    [sudo] password for cisco: 
+    root@labvm:~#
+
+g) MOdifique los permisos para el directorio de Joe:
+
+    root@labvm:~# cd /home
+    root@labvm:/home# chmod o-x joe
+    root@labvm:/home# ls -l
+    total 28
+    drwxr-xr-x  2 Alice Alice 4096 Mar 18  2021 Alice
+    drwxr-xr-x  2 Bob   Bob   4096 Mar 18  2021 Bob
+    drwxr-xr-x 10 cisco cisco 4096 Jan 22 22:39 cisco
+    drwxr-xr-x  2 Eric  Eric  4096 Mar 18  2021 Eric
+    drwxr-xr-x  2 Eve   Eve   4096 Mar 18  2021 Eve
+    drwxr-xr-x  9 jenny jenny 4096 Jan 22 23:54 jenny
+    drwxr-xr--  2 joe   joe   4096 Jan 22 22:42 joe
+
+h) Me desloguee de root y de cisco. Ingrese el comando cd joe para intentar navegar al directorio de Joe, pero se 
+deniega el acceso.
+
+    root@labvm:/home# exit
+    logout
+    cisco@labvm:/home$ exit
+    exit
+    jenny@labvm:/home$ cd joe
+    bash: cd: joe: Permission denied
+
