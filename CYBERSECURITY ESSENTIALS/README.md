@@ -30,3 +30,8 @@ autorizar privilegios de lectura, escritura y ejecución para usuarios y grupos.
 Utilice Lynins, una herramienta de auditoría de seguridad para descubrir las vulnerabilidades del sistema. En base al 
  análisis de Lynis, implemente las soluciones recomendadas para fortalecer el sistema. 
 
+#### **_h) Recuperar Contraseñas (John the Ripper):_**
+En esta práctica de laboratorio, utilizé John the Ripper, una herramienta de recuperación de contraseñas de código 
+abierto, para recuperar las contraseñas de las cinco cuentas.
+
+
