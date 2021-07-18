@@ -201,5 +201,14 @@ De la investigacion procedi a utilizar los comandos: apt-get update y apt-get up
     
     <omiti salidas para facilitar el entendimiento del practico>
 
-Ejecute Lynis nuevamente para verificar las advertencias y sugerencias:
+Luego de reinicial la PC, ejecuté Lynis nuevamente para verificar las advertencias y verificar que solo quede una:
 
+    -[ Lynis 3.0.3 Results ]-
+    
+      Warnings (1):
+      ----------------------------
+      ! iptables module(s) loaded, but no rules active [FIRE-4512] 
+          https://cisofy.com/lynis/controls/FIRE-4512/
+
+
+La solucion funcionó.
