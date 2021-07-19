@@ -70,3 +70,25 @@ b) Cambiae la contraseña del usuario Eric:
     passwd: password updated successfully
     cisco@labvm:~/Downloads/john/run$ 
 
+c) Ejecutéel comando unshadow, y luego john nuevamente para ver si puede descifrar la contraseña de Eric. Al cambiar la
+contraseña de Eric a una que sea lo suficientemente fuerte como para tardar miles de años en descifrarla, tendria 
+que esperar muchas horas. Para terminar el proceso use Ctrl+C para detener a John the Ripper.
+
+    cisco@labvm:~/Downloads/john/run$ ./john --wordlist=password.lst --rules 
+    mypasswd --format=crypt
+    Loaded 5 password hashes with 5 different salts (crypt, generic crypt(3) [?/64])
+    Remaining 1 password hash
+    Press 'q' or Ctrl-C to abort, almost any other key for status
+    0g 0:00:00:17 7% 0g/s 599.6p/s 599.6c/s 599.6C/s reddog1..mark1
+    Session aborted
+
+d) Usar el comando ./john --show mypasswd de nuevo para ver que contraseñas fueron creakeadas
+
+    cisco@labvm:~/Downloads/john/run$ ./john --show mypasswd
+    cisco:password:900:900:Cybersecurity Analyst,,,:/home/cisco:/bin/bash
+    Alice:123456:1000:1000::/home/Alice:/bin/bash
+    Bob:12345:1001:1001::/home/Bob:/bin/bash
+    Eve:password:1002:1002::/home/Eve:/bin/bash
+    4 password hashes cracked, 1 left
+    cisco@labvm:~/Downloads/john/run$
+
