@@ -21,6 +21,7 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
     06- Configurar Autentificacion y Autorizacion en Linux
     07- Fortalecer un sistema Linux (LYNIS)
     08- Recuperar contraseñas (JOHN THE RIPPER)
+    09- Configurar un cliente VPN de acceso remoto
 
 
 
