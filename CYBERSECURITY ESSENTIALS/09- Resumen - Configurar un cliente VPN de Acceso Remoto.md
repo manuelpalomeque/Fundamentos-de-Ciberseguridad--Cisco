@@ -91,3 +91,44 @@ ACTIVE
 ¿Qué dirección IP de destino aparece en la salida y a qué dispositivo se asigna esta dirección?
 10.1.0.11, que es la dirección IP de la interfaz G0/0 de Internet del enrutador Cafe.
 
+3-b) Conecte con el servidor ftp y use de credenciales: usuario: remote contraseña: ciscorocks
+
+    C:\>ftp 172.19.0.3
+    Trying to connect...172.19.0.3
+    Connected to 172.19.0.3
+    220- Welcome to PT Ftp server
+    Username:remote
+    331- Username ok, need password
+    Password:
+    230- Logged in
+    (passive mode On)
+    ftp>
+
+3-c) usar el comando dir para ver que archivos estan en la carpeta
+
+    ftp>dir
+    
+    Listing /ftp directory from 172.19.0.3: 
+    0 : PTsecurity.txt 92
+
+3-d) usé el comando get para descargar el archivo y luego cerre la sesion del servidor
+
+    ftp>get
+    remote filename not specified
+    ftp>get PTsecurity.txt
+    
+    Reading file PTsecurity.txt from 172.19.0.3: 
+    File transfer in progress...
+    
+    [Transfer complete - 92 bytes]
+    
+    92 bytes copied in 0.047 secs (1957 bytes/sec)
+    ftp>quit
+    
+    221- Service closing control connection.
+    C:\>
+
+3-f) Abrir el archivo PTsecurity.txt y ver el contenido:
+
+    Congratulations! You have successfully downloaded this file from the Data Center FTP server.
+
