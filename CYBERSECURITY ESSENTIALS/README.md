@@ -34,4 +34,7 @@ Utilice Lynins, una herramienta de auditoría de seguridad para descubrir las vu
 En esta práctica de laboratorio, utilizé John the Ripper, una herramienta de recuperación de contraseñas de código 
 abierto, para recuperar las contraseñas de las cinco cuentas.
 
-
+#### **_i) Configurar un cliente VPN de acceso remoto:_**
+Configuré un cliente VPN de acceso remoto para conectar una computadora portátil en el
+Café a una red en el Centro de Datos, verifiqué la conexión VPN. Utilicé un "sniffer" para observar el trafico de datos 
+cifrados y no cifrados.
