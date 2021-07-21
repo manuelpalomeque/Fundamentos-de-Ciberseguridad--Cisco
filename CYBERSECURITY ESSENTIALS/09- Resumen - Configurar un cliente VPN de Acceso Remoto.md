@@ -132,3 +132,49 @@ ACTIVE
 
     Congratulations! You have successfully downloaded this file from the Data Center FTP server.
 
+## 2) Capturar y examinar el tráfico de la red:
+
+2-b) El comando que use para conectar con el servidor telnet:
+
+    C:\>telnet 10.0.0.2
+    Trying 10.0.0.2 ...OpenPrivate network. No unauthorized access.
+    
+    
+    User Access Verification
+    
+    Username:
+
+2-c) primer resultado del paquete telnet capturado:
+
+    TELNET DATA:Private network. No unauthorized access. User Access Verification Username: 
+
+2-d) El tipo de trafico que se captura cuando intentamos conectar al servidor FTP:
+
+ICMP se genera porque no se puede acceder al servidor FTP. 
+Detalles:
+ICMP:
+
+    TYPE:0x03 
+
+El tipo ICMP es 3 para Destino inalcanzable
+
+    CODE:0x01 
+
+El código es 1 para host inalcanzable.
+
+3-a) Al reconectarse a la VPN el trafico capturado es:
+
+ISAKMP, que es usado para establecer el tunel VPN
+ 
+3-c) el trafico que captura cuando se hace ping al servidor FTP es:
+
+ISAKMP e IPsec. El tráfico ICMP está oculto dentro del túnel IPsec seguro.
+
+3-d) el trafico que captura cuando se conecta al servidor FTP es:
+
+ISAKMP e IPsec. El tráfico FTP está oculto dentro del túnel IPsec seguro.
+
+3-e) Del analisis del paquete ISAKMP, se concluye que el puerto que se esta usando es el 500
+
+    DESTINATION PORT:500 
+
