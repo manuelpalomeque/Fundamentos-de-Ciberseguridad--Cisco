@@ -38,3 +38,8 @@ abierto, para recuperar las contraseñas de las cinco cuentas.
 Configuré un cliente VPN de acceso remoto para conectar una computadora portátil en el
 Café a una red en el Centro de Datos, verifiqué la conexión VPN. Utilicé un "sniffer" para observar el trafico de datos 
 cifrados y no cifrados.
+
+#### **_j) Configurar el endurecimiento y la seguridad del enrutador inalámbrico:_**
+Configuré los ajustes básicos de seguridad para un enrutador inalámbrico y la seguridad de la red del enrutador. Tambien
+configuré la seguridad de red de los clientes inalámbricos y verifique la configuración de conectividad y seguridad
+
