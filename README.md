@@ -22,6 +22,8 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
     07- Fortalecer un sistema Linux (LYNIS)
     08- Recuperar contraseñas (JOHN THE RIPPER)
     09- Configurar un cliente VPN de acceso remoto
+    10- Configurar el endurecimiento y la seguridad del enrutador inalámbrico
+
 
 
 
