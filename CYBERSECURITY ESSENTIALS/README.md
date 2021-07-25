@@ -46,3 +46,8 @@ el modo de seguridad a WPA2, el crifrado AES y estableci una contraseña. Config
 para invitados). Tambien configuré la seguridad de red de los clientes inalámbricos (Configure la conectividad 
 inalámbrica para los dispositivos IoT.) y verifique la configuración de conectividad y seguridad
 
+#### **_j) Configurar una VPN de sitio a sitio:_**
+Agregue los comandos necesarios para configurar una VPN sitio a sitio IPsec, entre la Sucursal a la Sede
+El protocolo de administración de claves y asociación de seguridad de Internet (ISAKMP) es parte del conjunto de 
+protocolos IPsec y se utilizá para negociar los parámetros y las claves para establecer una asociación de seguridad (SA)
+entre los dos sitios.
