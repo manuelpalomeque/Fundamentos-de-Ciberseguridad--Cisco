@@ -40,6 +40,9 @@ Café a una red en el Centro de Datos, verifiqué la conexión VPN. Utilicé un 
 cifrados y no cifrados.
 
 #### **_j) Configurar el endurecimiento y la seguridad del enrutador inalámbrico:_**
-Configuré los ajustes básicos de seguridad para un enrutador inalámbrico y la seguridad de la red del enrutador. Tambien
-configuré la seguridad de red de los clientes inalámbricos y verifique la configuración de conectividad y seguridad
+Configuré los ajustes básicos de seguridad para un enrutador inalámbrico(cambie la contraseña predeterminada a una mas 
+robusta, deshabilite la gestion remota) y la seguridad de la red del enrutador inhalambrica (Configuré el SSID, configure 
+el modo de seguridad a WPA2, el crifrado AES y estableci una contraseña. Configure la seguridad de la red inalámbrica
+para invitados). Tambien configuré la seguridad de red de los clientes inalámbricos (Configure la conectividad 
+inalámbrica para los dispositivos IoT.) y verifique la configuración de conectividad y seguridad
 
