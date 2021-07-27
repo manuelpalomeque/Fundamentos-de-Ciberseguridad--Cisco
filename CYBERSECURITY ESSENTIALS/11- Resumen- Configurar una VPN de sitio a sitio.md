@@ -63,5 +63,20 @@ BRouter1. Esto identifica el punto final del túnel.
     *Jan  3 07:16:26.785: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is ON
     Branch(config-if)#
 
+El enrutador genera una notificación de que la criptografía ahora está activada.
 
+3-a)Incorporé las siguientes declaraciones de ACL para identificar el tráfico de interes, que usará el túnel.
+Estas declaraciones de ACL identifican el tráfico procedente de la red de la sucursal a las subredes de la red de la 
+sede.
+
+    Branch(config)#access-list 101 permit ip 10.0.3.0 0.0.0.255 192.168.10.0 0.0.0.255
+    Branch(config)#access-list 101 permit ip 10.0.3.0 0.0.0.255 192.168.20.0 0.0.0.255
+    Branch(config)#access-list 101 permit ip 10.0.3.0 0.0.0.255 192.168.30.0 0.0.0.255
+    Branch(config)#access-list 101 permit ip 10.0.3.0 0.0.0.255 192.168.50.0 0.0.0.255
+    Branch(config)#access-list 101 permit ip 10.0.3.0 0.0.0.255 192.168.75.0 0.0.0.255
+    Branch(config)#access-list 101 permit ip 10.0.3.0 0.0.0.255 192.168.99.0 0.0.0.255
+    Branch(config)#access-list 101 permit icmp 10.0.3.0 0.0.0.255 192.168.10.0 0.0.0.255
+    Branch(config)#access-list 101 permit icmp 10.0.3.0 0.0.0.255 192.168.20.0 0.0.0.255
+    Branch(config)#access-list 101 permit icmp 10.0.3.0 0.0.0.255 192.168.75.0 0.0.0.255
+    Branch(config)#access-list 101 permit icmp 10.0.3.0 0.0.0.255 192.168.99.0 0.0.0.255
 
