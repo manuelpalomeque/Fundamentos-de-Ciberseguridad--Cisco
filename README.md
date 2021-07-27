@@ -24,6 +24,8 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
     09- Configurar un cliente VPN de acceso remoto
     10- Configurar el endurecimiento y la seguridad del enrutador inalámbrico
     11- Configurar una VPN de sitio a sitio
+    12- Usar comandos de diagnóstico
+
 
 
 
