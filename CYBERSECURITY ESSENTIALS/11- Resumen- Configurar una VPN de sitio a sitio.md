@@ -80,3 +80,17 @@ sede.
     Branch(config)#access-list 101 permit icmp 10.0.3.0 0.0.0.255 192.168.75.0 0.0.0.255
     Branch(config)#access-list 101 permit icmp 10.0.3.0 0.0.0.255 192.168.99.0 0.0.0.255
 
+4-a) La traducción de direcciones de red (NAT) no se ejecutará para el tráfico que viaja a través del túnel.
+Eliminé ACL 102 de la configuración actual
+
+    Branch(config)#no access-list 102
+
+4-b) NAT se utilizará en todo el tráfico que NO viaje a través del túnel. 
+Agregué los siguientes comandos de ACL a la configuración para identificar el tráfico que pasará por la traducción de 
+direcciones de red. 
+
+    Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.1.0.0 0.0.255.255
+    Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.2.0.0 0.0.255.255
+    Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.3.0.0 0.0.255.255
+    Branch(config)#
+
