@@ -51,3 +51,8 @@ Agregue los comandos necesarios para configurar una VPN sitio a sitio IPsec, ent
 El protocolo de administración de claves y asociación de seguridad de Internet (ISAKMP) es parte del conjunto de 
 protocolos IPsec y se utilizá para negociar los parámetros y las claves para establecer una asociación de seguridad (SA)
 entre los dos sitios.
+
+#### **_k) Usar comandos de diagnóstico:_**
+En este practico recopilé la configuración del dispositivo del usuario final, la información sobre dispositivos de red
+(incluye la dirección IP, la puerta de enlace predeterminada y la configuración del servidor DNS)y diagnostiqué 
+problemas de conectividad.
