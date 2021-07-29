@@ -202,3 +202,62 @@ No está configurado
 ¿Cómo se configura la ruta por defecto? ¿Utiliza la dirección del siguiente salto?
 Está configurado con la interfaz de salida en lugar de la dirección del siguiente salto.
 
+1-e) Ingresé el comando show cdp neighbours detail.
+
+    HQ-Edge#  show cdp neighbors detail
+    
+    Device ID: ISP
+    Entry address(es): 
+      IP address : 10.0.0.49
+    Platform: cisco PT1000, Capabilities: Router
+    Interface: GigabitEthernet0/0/0, Port ID (outgoing port): GigabitEthernet1/0
+    Holdtime: 121
+    
+    Version :
+    Cisco Internetwork Operating System Software
+    IOS (tm) PT1000 Software (PT1000-I-M), Version 12.2(28), RELEASE SOFTWARE (fc5)
+    Technical Support: http://www.cisco.com/techsupport
+    Copyright (c) 1986-2005 by cisco Systems, Inc.
+    Compiled Wed 27-Apr-04 19:01 by miwang
+    
+    advertisement version: 2
+    Duplex: full
+    
+    HQ-Edge#
+
+¿Cuál es la dirección IPv4 de la dirección del siguiente salto (ISP)?
+
+    IP address : 10.0.0.49
+
+¿Qué puerto del enrutador ISP está conectado a HQ-Edge?
+
+    Interface: GigabitEthernet0/0/0
+
+¿Qué versión de IOS se usa en el enrutador ISP?
+
+    IOS (tm) PT1000 Software (PT1000-I-M), Version 12.2(28) RELEASE SOFTWARE (fc5)
+
+1-f) Ingrese el comando ping 10.0.0.49.
+
+    HQ-Edge# ping 10.0.0.49
+    
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 10.0.0.49, timeout is 2 seconds:
+    !!!!!
+    Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms
+    
+    HQ-Edge#
+
+1-g) Ingresé el comando show arp
+
+    HQ-Edge# show arp
+    Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+    Internet  10.0.0.49               42  0060.2FE1.903B  ARPA   GigabitEthernet0/0/0
+    Internet  10.0.0.50               -   0000.0C99.CB04  ARPA   GigabitEthernet0/0/0
+    Internet  192.168.99.10           42  0090.2B03.46D1  ARPA   GigabitEthernet0/0/1.99
+    HQ-Edge#
+
+¿Cuál es la dirección MAC de la interfaz en el enrutador ISP que está conectado a HQ-Edge?
+
+    0060.2FE1.903B
+
