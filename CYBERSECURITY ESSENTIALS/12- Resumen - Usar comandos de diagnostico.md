@@ -102,3 +102,103 @@ El comando ipconfig no informa la dirección del servidor DNS
     Default Gateway         |   192.168.99.1
     DNS Servers             |   10.2.0.125
 
+## Parte 2 : Recopilar información sobre dispositivos de red
+
+1-c) Necesitamos identificar la información del dispositivo ascendente ubicada en el ISP. Use el comando show ip route | 
+begin Gateway:
+
+    HQ-Edge>enable
+    HQ-Edge#show ip route | begin gateway
+    HQ-Edge#    show ip route | begin Gateway
+    Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+    
+         10.0.0.0/8 is variably subnetted, 6 subnets, 4 masks
+    O       10.0.0.0/29 [110/2] via 10.0.0.49, 00:13:11, GigabitEthernet0/0/0
+    O       10.0.0.32/29 [110/2] via 10.0.0.49, 00:13:11, GigabitEthernet0/0/0
+    C       10.0.0.48/29 is directly connected, GigabitEthernet0/0/0
+    L       10.0.0.50/32 is directly connected, GigabitEthernet0/0/0
+    O       10.0.3.0/24 [110/3] via 10.0.0.49, 00:13:11, GigabitEthernet0/0/0
+    O       10.2.0.0/16 [110/2] via 10.0.0.49, 00:13:11, GigabitEthernet0/0/0
+         192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks
+    C       192.168.10.0/24 is directly connected, GigabitEthernet0/0/1.10
+    L       192.168.10.1/32 is directly connected, GigabitEthernet0/0/1.10
+         192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+    C       192.168.20.0/24 is directly connected, GigabitEthernet0/0/1.20
+    L       192.168.20.1/32 is directly connected, GigabitEthernet0/0/1.20
+         192.168.30.0/24 is variably subnetted, 2 subnets, 2 masks
+    C       192.168.30.0/24 is directly connected, GigabitEthernet0/0/1.30
+    L       192.168.30.1/32 is directly connected, GigabitEthernet0/0/1.30
+         192.168.50.0/24 is variably subnetted, 2 subnets, 2 masks
+    C       192.168.50.0/24 is directly connected, GigabitEthernet0/0/1.50
+    L       192.168.50.1/32 is directly connected, GigabitEthernet0/0/1.50
+         192.168.75.0/24 is variably subnetted, 2 subnets, 2 masks
+    C       192.168.75.0/24 is directly connected, GigabitEthernet0/0/1.75
+    L       192.168.75.1/32 is directly connected, GigabitEthernet0/0/1.75
+         192.168.99.0/24 is variably subnetted, 2 subnets, 2 masks
+    C       192.168.99.0/24 is directly connected, GigabitEthernet0/0/1.99
+    L       192.168.99.1/32 is directly connected, GigabitEthernet0/0/1.99
+    S*   0.0.0.0/0 is directly connected, GigabitEthernet0/0/0
+    
+    HQ-Edge# 
+
+1-c-a) ¿Cuál es la dirección de la puerta de enlace de último recurso (o puerta de enlace predeterminada)?
+
+    S*   0.0.0.0/0 is directly connected, GigabitEthernet0/0/0
+
+1-c-b) ¿Por qué no se muestra la dirección del siguiente salto?
+No está configurado
+
+1-d) Ingresé el comando running-config | begin ip route.
+
+    HQ-Edge# running-config | begin ip
+                            ^
+    % Invalid input detected at '^' marker.
+        
+    HQ-Edge#  show running-config | begin ip route
+    ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0/0 
+    !
+    ip flow-export version 9
+    !
+    !
+    ip access-list standard NAT-PERMIT
+     permit 192.168.10.0 0.0.0.255
+     permit 192.168.20.0 0.0.0.255
+     permit 192.168.99.0 0.0.0.15
+     permit 192.168.75.0 0.0.0.7
+    ip access-list standard ADMIN-ONLY
+     permit 192.168.99.0 0.0.0.255
+     deny any
+    access-list 101 permit ip 192.168.10.0 0.0.0.255 10.0.3.0 0.0.0.255
+    access-list 101 permit ip 192.168.20.0 0.0.0.255 10.0.3.0 0.0.0.255
+    access-list 101 permit ip 192.168.75.0 0.0.0.255 10.0.3.0 0.0.0.255
+    access-list 101 permit ip 192.168.99.0 0.0.0.255 10.0.3.0 0.0.0.255
+    access-list 101 permit icmp any 10.0.3.0 0.0.0.255
+    ip access-list extended NAT-NOVPN
+     permit ip 192.168.0.0 0.0.255.255 10.2.0.0 0.0.255.255
+     permit ip 192.168.0.0 0.0.255.255 10.1.0.0 0.0.255.255
+     permit ip 192.168.0.0 0.0.255.255 192.168.0.0 0.0.0.255
+     permit ip 192.168.0.0 0.0.255.255 172.0.0.0 0.0.255.255
+    !
+    !
+    !
+    !
+    !
+    !
+    line con 0
+    !
+    line aux 0
+    !
+    line vty 0 4
+     login
+    !
+    !
+    !
+    end
+    
+    
+    HQ-Edge#
+
+
+¿Cómo se configura la ruta por defecto? ¿Utiliza la dirección del siguiente salto?
+Está configurado con la interfaz de salida en lugar de la dirección del siguiente salto.
+
