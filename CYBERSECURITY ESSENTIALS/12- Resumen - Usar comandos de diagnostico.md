@@ -261,3 +261,152 @@ Está configurado con la interfaz de salida en lugar de la dirección del siguie
 
     0060.2FE1.903B
 
+
+2-a) Desde 1-1, 1-2, 1-3, 1-4, FL-1P y HQ-Laptop-1, usé el comando ipconfig para encontrar sus direcciones IPv4 y 
+puertas de enlace predeterminadas
+
+
+pc 1-1
+
+    C:\>ipconfig
+    
+    FastEthernet0 Connection:(default port)
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: FE80::201:C7FF:FE54:EB5
+       IPv6 Address....................: ::
+       IPv4 Address....................: 192.168.10.4
+       Subnet Mask.....................: 255.255.255.0
+       Default Gateway.................: ::
+                                         192.168.10.1
+    
+    Bluetooth Connection:
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: ::
+       IPv6 Address....................: ::
+       IPv4 Address....................: 0.0.0.0
+       Subnet Mask.....................: 0.0.0.0
+       Default Gateway.................: ::
+                                         0.0.0.0
+
+-------------------------------------------------
+pc 1-2
+
+    C:\>ipconfig
+    
+    FastEthernet0 Connection:(default port)
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: FE80::202:4AFF:FE8A:D20E
+       IPv6 Address....................: ::
+       IPv4 Address....................: 192.168.10.3
+       Subnet Mask.....................: 255.255.255.0
+       Default Gateway.................: ::
+                                         192.168.10.1
+    
+    Bluetooth Connection:
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: ::
+       IPv6 Address....................: ::
+       IPv4 Address....................: 0.0.0.0
+       Subnet Mask.....................: 0.0.0.0
+       Default Gateway.................: ::
+                                         0.0.0.0
+
+-------------------------------------------------
+pc 1-3
+
+    C:\>ipconfig
+    
+    FastEthernet0 Connection:(default port)
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: FE80::201:C9FF:FEE9:887E
+       IPv6 Address....................: ::
+       IPv4 Address....................: 192.168.20.3
+       Subnet Mask.....................: 255.255.255.0
+       Default Gateway.................: ::
+                                         192.168.20.1
+    
+    Bluetooth Connection:
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: ::
+       IPv6 Address....................: ::
+       IPv4 Address....................: 0.0.0.0
+       Subnet Mask.....................: 0.0.0.0
+       Default Gateway.................: ::
+                                         0.0.0.0
+
+----------------------------------------------------
+pc 1-4
+
+    C:\>ipconfig
+    
+    FastEthernet0 Connection:(default port)
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: FE80::201:97FF:FEBA:7BB0
+       IPv6 Address....................: ::
+       IPv4 Address....................: 192.168.20.4
+       Subnet Mask.....................: 255.255.255.0
+       Default Gateway.................: ::
+                                         192.168.20.1
+    
+    Bluetooth Connection:
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: ::
+       IPv6 Address....................: ::
+       IPv4 Address....................: 0.0.0.0
+       Subnet Mask.....................: 0.0.0.0
+       Default Gateway.................: ::
+                                         0.0.0.0
+
+--------------------------------------------------------
+FL-1P
+
+    IPV4 Address 192.168.50.4
+    Defeault Gateway 192.168.50.1
+
+-------------------------------------------------------
+
+HQ-Laptop-1
+
+    C:\>ipconfig
+    
+    Wireless0 Connection:(default port)
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: FE80::20A:F3FF:FEE4:EEAA
+       IPv6 Address....................: ::
+       IPv4 Address....................: 192.168.50.2
+       Subnet Mask.....................: 255.255.255.0
+       Default Gateway.................: ::
+                                         192.168.50.1
+    
+    Bluetooth Connection:
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: ::
+       IPv6 Address....................: ::
+       IPv4 Address....................: 0.0.0.0
+       Subnet Mask.....................: 0.0.0.0
+       Default Gateway.................: ::
+                                         0.0.0.0
+
+
+Completé la tabla:
+
+    Device      |   IPv4 Address    |    Default Gateway
+
+    1-1         |   192.168.10.4    |    192.168.10.1
+    1-2         |   192.168.10.3    |    192.168.10.1
+    1-3         |   192.168.20.3    |    192.168.20.1
+    1-4         |   192.168.20.4    |    192.168.20.1
+    FL-1P       |   192.168.50.4    |    192.168.50.1
+    HQ-Laptop-1 |   192.168.50.2    |    192.168.50.1
+
+
