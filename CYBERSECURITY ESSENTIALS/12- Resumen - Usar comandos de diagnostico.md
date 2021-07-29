@@ -410,3 +410,102 @@ Completé la tabla:
     HQ-Laptop-1 |   192.168.50.2    |    192.168.50.1
 
 
+2-b) Desde la PC 1-1, abrí el Símbolo del sistema y luego ingrese el comando arp -a.
+
+    C:\>arp -a
+    No ARP Entries Found
+
+¿Qué información se muestra?
+NO se encuentraron entradas ARP
+
+2-c) Use el comando ping para verificar la conectividad con las pcs: 1-2, 1-3, 1-4, la impresora
+FL-1P y la laptop HQ-Laptop-1
+
+    C:\> ping 192.168.10.3
+    
+    Pinging 192.168.10.3 with 32 bytes of data:
+    
+    Reply from 192.168.10.3: bytes=32 time<1ms TTL=128
+    Reply from 192.168.10.3: bytes=32 time<1ms TTL=128
+    Reply from 192.168.10.3: bytes=32 time<1ms TTL=128
+    Reply from 192.168.10.3: bytes=32 time<1ms TTL=128
+    
+    Ping statistics for 192.168.10.3:
+        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 0ms, Maximum = 0ms, Average = 0ms
+    
+    C:\>ping 192.168.20.3
+    
+    Pinging 192.168.20.3 with 32 bytes of data:
+    
+    Request timed out.
+    Reply from 192.168.20.3: bytes=32 time<1ms TTL=127
+    Reply from 192.168.20.3: bytes=32 time<1ms TTL=127
+    Reply from 192.168.20.3: bytes=32 time<1ms TTL=127
+    
+    Ping statistics for 192.168.20.3:
+        Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 0ms, Maximum = 0ms, Average = 0ms
+    
+    C:\> ping 192.168.20.4
+    
+    Pinging 192.168.20.4 with 32 bytes of data:
+    
+    Request timed out.
+    Reply from 192.168.20.4: bytes=32 time<1ms TTL=127
+    Reply from 192.168.20.4: bytes=32 time=2ms TTL=127
+    Reply from 192.168.20.4: bytes=32 time<1ms TTL=127
+    
+    Ping statistics for 192.168.20.4:
+        Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 0ms, Maximum = 2ms, Average = 0ms
+    
+    C:\>ping 192.168.50.4
+    
+    Pinging 192.168.50.4 with 32 bytes of data:
+    
+    Request timed out.
+    Reply from 192.168.50.4: bytes=32 time=15ms TTL=127
+    Reply from 192.168.50.4: bytes=32 time=10ms TTL=127
+    Reply from 192.168.50.4: bytes=32 time=41ms TTL=127
+    
+    Ping statistics for 192.168.50.4:
+        Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 10ms, Maximum = 41ms, Average = 22ms
+    
+    C:\> ping 192.168.50.2
+    
+    Pinging 192.168.50.2 with 32 bytes of data:
+    
+    Request timed out.
+    Reply from 192.168.50.2: bytes=32 time=22ms TTL=127
+    Reply from 192.168.50.2: bytes=32 time=2ms TTL=127
+    Reply from 192.168.50.2: bytes=32 time=30ms TTL=127
+    
+    Ping statistics for 192.168.50.2:
+        Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 2ms, Maximum = 30ms, Average = 18ms
+
+2-d) Ingresé el comando arp -a.
+
+    C:\>arp -a
+      Internet Address      Physical Address      Type
+      192.168.10.1          000a.41ea.6b47        dynamic
+      192.168.10.3          0002.4a8a.d20e        dynamic
+
+¿Qué información se muestra?
+
+la direccion IP, la direccion MAC y el tipo de conexion (dinamica)
+
+¿Por qué las entradas en la tabla ARP no contienen información sobre los dispositivos en las redes 192.168.20.0 y 
+192.168.50.0 mientras el ping es exitoso?
+192.168.10.0/24, 192.168.20.0/24 y 192.168.50.0/24 están en diferentes VLAN. Hacer ping desde la red 192.168.10.0 a 
+otras redes VLAN primero debería pasar por la puerta de enlace predeterminada. Por lo tanto, la tabla ARP solo contiene 
+la información sobre los dispositivos dentro de la misma red o la misma VLAN.
+
+
