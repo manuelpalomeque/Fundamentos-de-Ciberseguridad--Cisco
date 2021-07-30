@@ -508,4 +508,23 @@ la direccion IP, la direccion MAC y el tipo de conexion (dinamica)
 otras redes VLAN primero debería pasar por la puerta de enlace predeterminada. Por lo tanto, la tabla ARP solo contiene 
 la información sobre los dispositivos dentro de la misma red o la misma VLAN.
 
+2-e) Para encontrar la ruta que toma un paquete para llegar al servidor DNS, ingresé el comando tracert 10.2.0.125.
+¿Qué información se muestra?
+
+    C:\>tracert 10.2.0.125
+    
+    Tracing route to 10.2.0.125 over a maximum of 30 hops: 
+    
+      1   0 ms      0 ms      0 ms      192.168.10.1
+      2   0 ms      0 ms      0 ms      10.0.0.49
+      3   0 ms      0 ms      0 ms      10.2.0.125
+    
+    Trace complete.
+    
+    C:\>
+
+¿Cuántos enrutadores o saltos hay entre la PC 1-1 y el servidor DNS?
+Hay 2 saltos
+
+
 
