@@ -527,4 +527,13 @@ la información sobre los dispositivos dentro de la misma red o la misma VLAN.
 Hay 2 saltos
 
 
+## Parte 3: Diagnosticar problemas de conectividad
+
+1-b) Introducí la URL test.ptsecurity.com ¿Se muestra la página web? Si no, ¿cuál es el mensaje? 
+NO muestra la pagina web, el mensaje de error es "Host Name Unresolved"
+
+1-c) Ingresé la dirección IP 192.168.75.2. ¿Se muestra la página web?
+¿Por qué la página web se muestra usando la dirección IP pero no el nombre de dominio?
+Si muestra la pagina web. La PC no puede resolver el nombre de dominio a la dirección IP.
+
 
