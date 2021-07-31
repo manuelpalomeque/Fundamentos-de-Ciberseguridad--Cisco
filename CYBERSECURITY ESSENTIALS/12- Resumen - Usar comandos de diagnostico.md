@@ -536,4 +536,55 @@ NO muestra la pagina web, el mensaje de error es "Host Name Unresolved"
 ¿Por qué la página web se muestra usando la dirección IP pero no el nombre de dominio?
 Si muestra la pagina web. La PC no puede resolver el nombre de dominio a la dirección IP.
 
+2-b) Ingresé el comando ping test.ptsecurity.com. ¿Qué mensaje se muestra?
+
+    C:\>ping test.ptsecurity.com
+    Ping request could not find host test.ptsecurity.com. Please check the name and try again.
+    C:\>
+
+¿Qué indica el mensaje?
+Por favor revisar el nombre y prueba de nuevo.
+
+2-c) Ingrese el comando nslookup test.ptsecurity.com. ¿Qué mensaje se muestra?
+
+    C:\> nslookup test.ptsecurity.com 
+    
+    Server: [10.2.0.125]
+    Address:  10.2.0.125
+    *** UnKnown can't find test.ptsecurity.com: Non-existent domain.
+
+¿Qué servidor es el servidor DNS predeterminado?
+    
+    Server: [10.2.0.125]
+
+2-d) El comando nslookup admite el uso de un servidor DNS alternativo. Introduzca el comando nslookup /? 
+para conocer las opciones disponibles para el comando.
+
+    C:\>  nslookup /?
+    Usage:
+    
+    nslookup              # interactive mode using default server
+    nslookup host         # just look up 'host' using default server
+    nslookup host a.b.c.d # just look up 'host' using DNS server with ip address 'a.b.c.d'
+    C:\>
+
+2-e) Ingresé el comando nslookup test.ptsecurity.com 192.168.99.3 ¿Qué mensaje se muestra?
+
+    C:\>nslookup test.ptsecurity.com 192.168.99.3
+    
+    Server: [192.168.99.3]
+    Address:  192.168.99.3
+    DNS request timed out.
+        timeout was 15000 milli seconds.
+    
+    Server: [192.168.99.3]
+    Address:  192.168.99.3
+    
+    Non-authoritative answer:
+    Name:   test.ptsecurity.com
+    Address:   192.168.75.2
+
+En el paso 2c, ¿por qué no se puede resolver el nombre de dominio?
+Cuando se ingresa un nombre de dominio en el cuadro URL, la PC intenta resolverlo a través del servidor DNS 
+predeterminado. En este caso, el servidor DNS predeterminado no contiene la información en su base de datos.
 
