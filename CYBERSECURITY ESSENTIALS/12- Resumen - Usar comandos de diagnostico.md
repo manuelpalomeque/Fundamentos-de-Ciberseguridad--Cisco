@@ -629,4 +629,147 @@ Si se muestra la pagina
 ¿Qué conclusión se puede sacar?
 El servidor web se está ejecutando; sin embargo, el ping al servidor web está bloqueado.
 
+4-e) Desde la PC 1-1, ingresé el comando netstat.¿Qué mensaje se muestra? ¿Muestra algún dato?
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+
+NO muestra ningun dato
+
+4-f) Desde el servidor FTP, ingresé el comando netstat.¿Qué mensaje se muestra? ¿Muestra algún dato?
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+      TCP    0.0.0.0:25             0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:110            0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:8443           0.0.0.0:0              CLOSED
+    C:\>
+
+No muestra ninguna conexión activa con otros dispositivos ni puertos de escucha.
+
+4-g) En el servidor FTP, ingresé el comando ipconfig para determinar su dirección IP.
+
+    C:\> ipconfig
+    
+    FastEthernet0 Connection:(default port)
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: FE80::290:21FF:FE64:E9B9
+       IPv6 Address....................: ::
+       IPv4 Address....................: 192.168.75.2
+       Subnet Mask.....................: 255.255.255.0
+       Default Gateway.................: ::
+                                         192.168.75.1
+
+4-h) Desde la PC 1-1, inicie una sesión FTP con el servidor FTP. 
+
+    C:\>ftp 192.168.75.2
+    Trying to connect...192.168.75.2
+    Connected to 192.168.75.2
+    220- Welcome to PT Ftp server
+    Username:
+
+4-i) En el servidor FTP, ingrese el comando netstat.
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+      TCP    0.0.0.0:25             0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:110            0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:8443           0.0.0.0:0              CLOSED
+      TCP    192.168.75.2:21        192.168.10.4:1027      ESTABLISHED
+    C:\>
+
+¿Qué mensaje se muestra? ¿Hay alguna información nueva?
+Sí, una nueva entrada muestra:
+
+    TCP    192.168.75.2:21        192.168.10.4:1027      ESTABLISHED
+
+¿Qué puerto es el puerto de escucha y cuál es el estado de la conexión?
+Puerto de escucha: 21 y la conexion TCP esta establecida
+
+4-j) Desde PC 1-1, ingrese bob como nombre de usuario.
+
+    C:\>ftp 192.168.75.2
+    Trying to connect...192.168.75.2
+    Connected to 192.168.75.2
+    220- Welcome to PT Ftp server
+    Username:bob
+    331- Username ok, need password
+    Password:
+
+4-k) Desde el servidor FTP, ingrese el comando netstat.
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+      TCP    0.0.0.0:25             0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:110            0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:8443           0.0.0.0:0              CLOSED
+      TCP    192.168.75.2:21        192.168.10.4:1027      ESTABLISHED
+    C:\>
+
+¿Cambia la información mostrada?
+NO
+
+4-l) Desde la PC 1-1, ingrese cisco123 como contraseña.
+
+    C:\>ftp 192.168.75.2
+    Trying to connect...192.168.75.2
+    Connected to 192.168.75.2
+    220- Welcome to PT Ftp server
+    Username:bob
+    331- Username ok, need password
+    Password:
+    230- Logged in
+    (passive mode On)
+    ftp>
+
+4-m) Desde la PC 1-1, ingrese el comando dir.
+
+    ftp>dir
+    
+    Listing /ftp directory from 192.168.75.2: 
+    ftp>
+
+4-n) Desde el servidor FTP, ingrese el comando netstat.
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+      TCP    0.0.0.0:25             0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:110            0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:8443           0.0.0.0:0              CLOSED
+      TCP    192.168.75.2:21        192.168.10.4:1028      ESTABLISHED
+      TCP    192.168.75.2:1028      192.168.10.4:1029      CLOSED
+    C:\>
+
+¿Cambia la información mostrada?
+Si. Una nueva entrada muestra:
+
+    TCP    192.168.75.2:1028      192.168.10.4:1029      CLOSED
+
+4-o) Desde la PC 1-1, ingresé el comando put Sample2.txt para cargar el archivo Sample2.txt al servidor FTP.
+
+    ftp>put Sample2.txt
+    
+    Writing file Sample2.txt to 192.168.75.2: 
+    File transfer in progress...
+    
+    [Transfer complete - 43 bytes]
+    
+    43 bytes copied in 0.079 secs (544 bytes/sec)
+    ftp>
 
