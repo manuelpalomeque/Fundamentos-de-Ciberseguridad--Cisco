@@ -588,3 +588,45 @@ En el paso 2c, ¿por qué no se puede resolver el nombre de dominio?
 Cuando se ingresa un nombre de dominio en el cuadro URL, la PC intenta resolverlo a través del servidor DNS 
 predeterminado. En este caso, el servidor DNS predeterminado no contiene la información en su base de datos.
 
+3-a) Ingresé el comando ping mail.cybercloud.com. Que mensaje se muestra?
+
+    C:\> ping mail.cybercloud.com
+    
+    Pinging 172.19.0.4 with 32 bytes of data:
+    
+    Request timed out.
+    Request timed out.
+    Request timed out.
+    Request timed out.
+    
+    Ping statistics for 172.19.0.4:
+        Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+¿Qué información indica el mensaje?
+La resolución de nombres DNS es exitosa. Sin embargo, el ping falló. Los posibles motivos son que el host está inactivo 
+o que el eco/respuesta de eco ICMP está deshabilitado en el host.
+
+3-b) Ingresé el comando ping www.ptsecurity.com. ¿Qué mensaje se muestra?
+
+    C:\> ping www.ptsecurity.com
+    
+    Pinging 10.0.0.3 with 32 bytes of data:
+    
+    Request timed out.
+    Request timed out.
+    Reply from 10.0.0.3: Destination host unreachable.
+    Reply from 10.0.0.3: Destination host unreachable.
+    
+    Ping statistics for 10.0.0.3:
+        Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+Qué información indica el mensaje?
+Hay un firewall en la ruta que bloquea el ping al destino.
+
+3-c) Desde el navegador web fui a www.ptsecurity.com. ¿Se muestra la página web?
+Si se muestra la pagina
+
+¿Qué conclusión se puede sacar?
+El servidor web se está ejecutando; sin embargo, el ping al servidor web está bloqueado.
+
+
