@@ -773,3 +773,65 @@ Si. Una nueva entrada muestra:
     43 bytes copied in 0.079 secs (544 bytes/sec)
     ftp>
 
+4-p) Desde el servidor FTP, ingresé el comando netstat.
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+      TCP    0.0.0.0:25             0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:110            0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:8443           0.0.0.0:0              CLOSED
+      TCP    192.168.75.2:21        192.168.10.4:1028      ESTABLISHED
+    C:\>
+
+¿Cambia la información mostrada?
+Si. La línea "CLOSED" se ha ido.
+
+4-q) Esperé unos segundos y luego ingrese el comando netstat nuevamente.
+¿Cambia la información mostrada?
+NO
+
+4-r) Desde PC 1-1, ingresé el comando quit para salir del servidor
+
+    ftp>quit
+    
+    221- Service closing control connection.
+    C:\>
+
+4-s) Desde el servidor FTP, ingresé el comando netstat. ¿Cambia la información mostrada?
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+      TCP    0.0.0.0:25             0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:110            0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:8443           0.0.0.0:0              CLOSED
+    C:\>
+
+Si, ahora la conexión TCP entre 192.168.75.2:21 y 192.168.10.4:1028 está CERRADA.
+
+4-v) Desde el servidor FTP, ingrese el comando netstat. 
+
+    C:\>netstat
+    
+    Active Connections
+    
+      Proto  Local Address          Foreign Address        State
+      TCP    0.0.0.0:25             0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:110            0.0.0.0:0              CLOSED
+      TCP    0.0.0.0:8443           0.0.0.0:0              CLOSED
+      TCP    192.168.75.2:80        192.168.10.4:1031      CLOSED
+    C:\>
+
+¿Cambia la información mostrada?
+Si, hay una nueva entrada:
+    
+    TCP    192.168.75.2:80        192.168.10.4:1031      CLOSED
+
+¿Qué indica esta nueva entrada?
+El host 192.168.10.2 realiza una solicitud de página web. La página web se transmite (se muestra en el navegador web de 
+la PC 1-1) y la conexión TCP se cierra.
