@@ -56,3 +56,11 @@ entre los dos sitios.
 En este practico recopilé la configuración del dispositivo del usuario final, la información sobre dispositivos de red
 (incluye la dirección IP, la puerta de enlace predeterminada y la configuración del servidor DNS)y diagnostiqué 
 problemas de conectividad.
+
+#### **_l) Implementar seguridad física con dispositivos IoT:_**
+Instalé un dispositivo IoT para mejorar la seguridad del hogar. Luego configuré todos los dispositivos de IoT para 
+conectarse a la red inalámbrica y comunicarse con un servidor de registro de IoT remoto.
+Conecté dispositivos IoT a la red. Agregué dispositivos IoT al servidor de registro. Exploré la funcionalidad del 
+dispositivo de seguridad IoT.
+
+
