@@ -63,4 +63,8 @@ conectarse a la red inalámbrica y comunicarse con un servidor de registro de Io
 Conecté dispositivos IoT a la red. Agregué dispositivos IoT al servidor de registro. Exploré la funcionalidad del 
 dispositivo de seguridad IoT.
 
+#### **_m) Usar Wireshark para comparar el tráfico Telnet y SSH:_**
+Usé Wireshark para capturar el tráfico del navegador web, de Telnet y de SSH.
+
+
 
