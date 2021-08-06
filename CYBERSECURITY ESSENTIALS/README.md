@@ -66,5 +66,7 @@ dispositivo de seguridad IoT.
 #### **_m) Usar Wireshark para comparar el tráfico Telnet y SSH:_**
 Usé Wireshark para capturar el tráfico del navegador web, de Telnet y de SSH.
 
+#### **_n) Recopilar información del sistema después de un incidente:_**
+Recopilé información del sistema después de que ocurrió un incidente. Revisé registros de posibles intrusiones.
 
 
