@@ -378,5 +378,35 @@ e) Regresé a Wireshark y detuve la captura. Si dejó telnet como término de b�
 campo de filtro, no se listarán paquetes. Cambiar el término de búsqueda de telnet a ssh. Todos los paquetes de su 
 sesión SSH ahora deberían mostrarse en el panel Lista de paquetes.
 
-aca va la imagen 5
+<img src="https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/img_5.png">
 
+
+f) En el panel Detalles del paquete, expandí los campos Protocolo SSH para ver el contenido. En la lista de paquetes
+panel, haga clic en el primer paquete y luego use la flecha hacia abajo para ver una variedad de paquetes SSH. 
+Darse cuenta del campo Datos para el protocolo SSH muestra que todos los datos están encriptados.
+
+    Frame 12: 136 bytes on wire (1088 bits), 136 bytes captured (1088 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 6, Src: ::1, Dst: ::1
+    Transmission Control Protocol, Src Port: 35450, Dst Port: 22, Seq: 1554, Ack: 1098, Len: 48
+    SSH Protocol
+        SSH Version 2 (encryption:chacha20-poly1305@openssh.com mac:<implicit> compression:none)
+            Packet Length: 44
+            Padding Length: 6
+            Key Exchange
+                Message Code: Diffie-Hellman Key Exchange Init (30)
+                Multi Precision Integer Length: 32
+                DH client e: 8da46208be436698843fa6ef57606d15a6d9ebc8a1a0901e…
+            Padding String: 000000000000
+        [Direction: client-to-server]
+
+
+    Frame 14: 596 bytes on wire (4768 bits), 596 bytes captured (4768 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 6, Src: ::1, Dst: ::1
+    Transmission Control Protocol, Src Port: 22, Dst Port: 35450, Seq: 1098, Ack: 1602, Len: 508
+    SSH Protocol
+        SSH Version 2 (encryption:chacha20-poly1305@openssh.com mac:<implicit> compression:none)
+        SSH Version 2 (encryption:chacha20-poly1305@openssh.com mac:<implicit> compression:none)
+        SSH Version 2 (encryption:chacha20-poly1305@openssh.com mac:<implicit> compression:none)
+        [Direction: server-to-client]
