@@ -1,4 +1,4 @@
-## Paso 2: Exploré el analizador de protocolos Wireshark.
+## Parte 2: Exploré el analizador de protocolos Wireshark.
 
 a) Tuve que ejecutar Wireshark en modo promiscuo, lo que requiere ejecutar con privilegios escalados, mediante sudo. 
 Ingresé el comando sudo wireshark y luego ingrese la contraseña que es password. Se abrió la interfaz gráfica de usuario 
@@ -341,5 +341,42 @@ enviado y recibido durante la sesión de Telnet, incluido su comando de salida y
         Data: \r\n
         Data: logout\r\n
 
+## Parte 4: Capturé y analicé el tráfico SSH cifrado
 
+c) Para simular un inicio de sesión SSH, ingresé el comando ssh localhost. Si es la primera vez que usa el comando, el 
+sistema le advierte sobre la autenticidad de localhost y le pregunta si desea continuar. Ingresé "yes", y luego
+"password" como la contraseña para iniciar sesión.
+
+    cisco@labvm:~$ ssh localhost
+    The authenticity of host 'localhost (::1)' can't be established.
+    ECDSA key fingerprint is SHA256:lEvtfM55v9O8L88uvZ4Em/UL4ARo8jWGE1hV8mVnDhQ.
+    Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+    Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.
+    cisco@localhost's password: 
+    Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-96-generic x86_64)
+
+        * Documentation:  https://help.ubuntu.com
+        * Management:     https://landscape.canonical.com
+        * Support:        https://ubuntu.com/advantage
+
+    0 updates can be applied immediately.
+
+
+    The list of available updates is more than a week old.
+    To check for new updates run: sudo apt update
+    Last login: Mon Jan 31 01:17:10 2022 from localhost
+    cisco@labvm:~$ 
+
+d) Ingresé el comando exit para finalizar la sesión SSH.
+
+    cisco@labvm:~$ exit
+    logout
+    Connection to localhost closed.
+    cisco@labvm:~$ 
+
+e) Regresé a Wireshark y detuve la captura. Si dejó telnet como término de búsqueda en Aplicar una pantalla
+campo de filtro, no se listarán paquetes. Cambiar el término de búsqueda de telnet a ssh. Todos los paquetes de su 
+sesión SSH ahora deberían mostrarse en el panel Lista de paquetes.
+
+aca va la imagen 5
 
