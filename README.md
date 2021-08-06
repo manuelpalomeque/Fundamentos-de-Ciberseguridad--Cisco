@@ -27,6 +27,8 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
     12- Usar comandos de diagnóstico
     13- Implementar seguridad física con dispositivos IoT
     14- Usar Wireshark para comparar el tráfico Telnet y SSH
+    15- Recopilar información del sistema después de un incidente
+
 
 
 
