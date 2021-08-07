@@ -273,73 +273,73 @@ contraseña es la contraseña del usuario cisco
 o) Si continúa presionando la flecha hacia abajo a través del resto de los paquetes capturados, verá todo el texto 
 enviado y recibido durante la sesión de Telnet, incluido su comando de salida y el mensaje de cierre de sesión.
 
-Frame 69: 430 bytes on wire (3440 bits), 430 bytes captured (3440 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 110, Ack: 138, Len: 362
-Telnet
-    Data: Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-96-generic x86_64)\r\n
-    Data: \r\n
-    Data:  * Documentation:  https://help.ubuntu.com\r\n
-    Data:  * Management:     https://landscape.canonical.com\r\n
-    Data:  * Support:        https://ubuntu.com/advantage\r\n
-    Data: \r\n
-    Data: 0 updates can be applied immediately.\r\n
-    Data: \r\n
-    Data: \r\n
-    Data: The list of available updates is more than a week old.\r\n
-    Data: To check for new updates run: sudo apt update\r\n
-
-Frame 71: 118 bytes on wire (944 bits), 118 bytes captured (944 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 472, Ack: 138, Len: 50
-Telnet
-    Data: Last login: Thu Mar 18 21:47:23 UTC 2021 on tty2\r\n
-
-Frame 73: 128 bytes on wire (1024 bits), 128 bytes captured (1024 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 522, Ack: 138, Len: 60
-Telnet
-    Data: \033]0;cisco@labvm: ~\a\033[01;32mcisco@labvm\033[00m:\033[01;34m~\033[00m$ 
-
-Frame 116: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 138, Ack: 582, Len: 1
-Telnet
-    Data: e
-
-Frame 120: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 139, Ack: 583, Len: 1
-Telnet
-    Data: x
-
-Frame 124: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 140, Ack: 584, Len: 1
-Telnet
-    Data: i
-
-Frame 127: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 141, Ack: 585, Len: 1
-Telnet
-    Data: t
-
-
-Frame 131: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface any, id 0
-Linux cooked capture
-Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 586, Ack: 144, Len: 10
-Telnet
-    Data: \r\n
-    Data: logout\r\n
+    Frame 69: 430 bytes on wire (3440 bits), 430 bytes captured (3440 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 110, Ack: 138, Len: 362
+    Telnet
+        Data: Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-96-generic x86_64)\r\n
+        Data: \r\n
+        Data:  * Documentation:  https://help.ubuntu.com\r\n
+        Data:  * Management:     https://landscape.canonical.com\r\n
+        Data:  * Support:        https://ubuntu.com/advantage\r\n
+        Data: \r\n
+        Data: 0 updates can be applied immediately.\r\n
+        Data: \r\n
+        Data: \r\n
+        Data: The list of available updates is more than a week old.\r\n
+        Data: To check for new updates run: sudo apt update\r\n
+    
+    Frame 71: 118 bytes on wire (944 bits), 118 bytes captured (944 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 472, Ack: 138, Len: 50
+    Telnet
+        Data: Last login: Thu Mar 18 21:47:23 UTC 2021 on tty2\r\n
+    
+    Frame 73: 128 bytes on wire (1024 bits), 128 bytes captured (1024 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 522, Ack: 138, Len: 60
+    Telnet
+        Data: \033]0;cisco@labvm: ~\a\033[01;32mcisco@labvm\033[00m:\033[01;34m~\033[00m$ 
+    
+    Frame 116: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 138, Ack: 582, Len: 1
+    Telnet
+        Data: e
+    
+    Frame 120: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 139, Ack: 583, Len: 1
+    Telnet
+        Data: x
+    
+    Frame 124: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 140, Ack: 584, Len: 1
+    Telnet
+        Data: i
+    
+    Frame 127: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 57144, Dst Port: 23, Seq: 141, Ack: 585, Len: 1
+    Telnet
+        Data: t
+    
+    
+    Frame 131: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface any, id 0
+    Linux cooked capture
+    Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    Transmission Control Protocol, Src Port: 23, Dst Port: 57144, Seq: 586, Ack: 144, Len: 10
+    Telnet
+        Data: \r\n
+        Data: logout\r\n
 
 
 
