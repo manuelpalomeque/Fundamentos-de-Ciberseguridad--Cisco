@@ -89,7 +89,7 @@ e) Regrese a Wireshark y detenga la captura, haciendo click en stop.
 f) En el campo Aplicar un filtro de visualización, escriba telnet y presione Entrar para filtrar solo los paquetes 
 Telnet
 
-![img.png](img.png)
+![img.png](D:\GitHub\Fundamentos-de-Ciberseguridad--Cisco\CYBERSECURITY ESSENTIALS\Capturas de pantallas\img.png)
 
     No.	Time	Source	Destination	Protocol	Length	Info
     6	0.000087243	127.0.0.1	127.0.0.1	TELNET	95	Telnet Data ...
@@ -142,17 +142,17 @@ Telnet
 g) En la barra de herramientas, haga clic en el icono de la lupa para encontrar un paquete. Ahora se muestran funciones 
 de búsqueda adicionales debajo del campo Aplicar un filtro de visualización.
 
-![img_1.png](img_1.png)
+![img_1.png](D:\GitHub\Fundamentos-de-Ciberseguridad--Cisco\CYBERSECURITY ESSENTIALS\Capturas de pantallas\img_1.png)
 
 h) Haga clic en las flechas junto a Mostrar filtro (Display filter) y cámbielo a Cadena (String). Luego haga clic en las flechas al lado de 
 Lista de paquetes y cámbielo a Detalles del paquete.
 
-![img_3.png](img_3.png)
+![img_3.png](D:\GitHub\Fundamentos-de-Ciberseguridad--Cisco\CYBERSECURITY ESSENTIALS\Capturas de pantallas\img_3.png)
 
 i) Para encontrar el paquete que solicita la información de inicio de sesión, escriba "labvm login", en el campo junto a 
 Cadena y luego presione Entrar o haga clic en Buscar. Wireshark resaltará el paquete que contiene la cadena de texto "labvm login:".
 
-![img_4.png](img_4.png)
+![img_4.png](D:\GitHub\Fundamentos-de-Ciberseguridad--Cisco\CYBERSECURITY ESSENTIALS\Capturas de pantallas\img_4.png)
 
 j) En el panel Detalles del paquete, haga clic en la flecha junto a Telnet para expandir su contenido. Debería ver que 
 labvm login: son los datos para este paquete. Los datos del paquete también se muestran en el panel Bytes del paquete. 
