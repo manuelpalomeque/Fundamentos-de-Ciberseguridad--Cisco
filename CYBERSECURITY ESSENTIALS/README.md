@@ -46,27 +46,30 @@ el modo de seguridad a WPA2, el crifrado AES y estableci una contraseña. Config
 para invitados). Tambien configuré la seguridad de red de los clientes inalámbricos (Configure la conectividad 
 inalámbrica para los dispositivos IoT.) y verifique la configuración de conectividad y seguridad
 
-#### **_j) Configurar una VPN de sitio a sitio:_**
+#### **_k) Configurar una VPN de sitio a sitio:_**
 Agregue los comandos necesarios para configurar una VPN sitio a sitio IPsec, entre la Sucursal a la Sede
 El protocolo de administración de claves y asociación de seguridad de Internet (ISAKMP) es parte del conjunto de 
 protocolos IPsec y se utilizá para negociar los parámetros y las claves para establecer una asociación de seguridad (SA)
 entre los dos sitios.
 
-#### **_k) Usar comandos de diagnóstico:_**
+#### **_l) Usar comandos de diagnóstico:_**
 En este practico recopilé la configuración del dispositivo del usuario final, la información sobre dispositivos de red
 (incluye la dirección IP, la puerta de enlace predeterminada y la configuración del servidor DNS)y diagnostiqué 
 problemas de conectividad.
 
-#### **_l) Implementar seguridad física con dispositivos IoT:_**
+#### **_m) Implementar seguridad física con dispositivos IoT:_**
 Instalé un dispositivo IoT para mejorar la seguridad del hogar. Luego configuré todos los dispositivos de IoT para 
 conectarse a la red inalámbrica y comunicarse con un servidor de registro de IoT remoto.
 Conecté dispositivos IoT a la red. Agregué dispositivos IoT al servidor de registro. Exploré la funcionalidad del 
 dispositivo de seguridad IoT.
 
-#### **_m) Usar Wireshark para comparar el tráfico Telnet y SSH:_**
+#### **_n) Usar Wireshark para comparar el tráfico Telnet y SSH:_**
 Usé Wireshark para capturar el tráfico del navegador web, de Telnet y de SSH.
 
-#### **_n) Recopilar información del sistema después de un incidente:_**
+#### **_o) Recopilar información del sistema después de un incidente:_**
 Recopilé información del sistema después de que ocurrió un incidente. Revisé registros de posibles intrusiones.
 
+#### **_p) Gestión de riesgos:_**
+Realice el  proceso de identificación y evaluación de riesgos de una organización,ya que los tipos de amenazas cambian y
+nunca desaparecen por completo. El objetivo de la gestión de riesgos es reducir estas amenazas a un nivel aceptable.
 
