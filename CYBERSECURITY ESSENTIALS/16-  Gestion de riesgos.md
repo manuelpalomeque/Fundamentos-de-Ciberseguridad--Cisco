@@ -118,6 +118,7 @@ un ataque de ransomware, incendios, tornados, huracanes, terremotos, sistema da�
 del sistema o bajo rendimiento debido a malas configuraciones.
 
 Describa el impacto en la organización debido a las siguientes amenazas:
+<<<<<<< HEAD
  Violación de datos:El impacto podría variar desde la pérdida total del servidor de la base de datos hasta afectar las
 ventas y los ingresos de la organización. El impacto también podría incluir daños a la reputación comercial.
 
@@ -145,3 +146,19 @@ actualizados, copias de seguridad de datos, aplicación de políticas de segurid
 físico.
 
 ## Parte 3: Procesos de gestión de riesgos
+=======
+ Violación de datos:
+
+ Ransomware:
+
+ Fallo de hardware:
+
+Enumere una contramedida para las siguientes amenazas al servidor de la base de datos de la organización:
+ Violación de datos:
+
+ Ataque de ransomware:
+
+ Fallo de hardware:
+
+ Malware:
+>>>>>>> 99f451d2ce0971f126385f9af74e00ed1dba37f1
