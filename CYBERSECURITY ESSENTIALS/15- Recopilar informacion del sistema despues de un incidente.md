@@ -231,3 +231,66 @@ salida será diferente.
     Jan 31 14:30:01 labvm CRON[1797]: pam_unix(cron:session): session closed for user root
     (END)
 
+b) El último comando muestra una lista de los últimos usuarios que iniciaron sesión. Ingrese el comando con la opción 
+-f para especificar el archivo de registro. El archivo de registro btmp muestra los intentos de inicio de sesión 
+fallidos. 
+
+    root@labvm:/home/cisco# last -f /var/log/btmp
+    UNKNOWN  tty6                          Thu Mar 18 21:47    gone - no logout
+    UNKNOWN  tty4                          Thu Mar 18 21:47    gone - no logout
+    UNKNOWN  tty3                          Thu Mar 18 21:47    gone - no logout
+    cisco    tty1                          Thu Mar 18 21:47    gone - no logout
+    cisco    tty1                          Thu Mar 18 21:47 - 21:47  (00:00)
+    
+    btmp begins Thu Mar 18 21:47:05 2021
+    root@labvm:/home/cisco# 
+
+c) Ingresé el último comando nuevamente especificando el archivo wtmp para mostrar quién está actualmente conectado al 
+sistema. 
+
+    root@labvm:/home/cisco# last -f /var/log/wtmp
+    cisco    tty7         :0               Mon Jan 31 14:15    gone - no logout
+    reboot   system boot  5.4.0-96-generic Mon Jan 31 11:14   still running
+    cisco    pts/2        ::1              Mon Jan 31 13:07 - 13:09  (00:02)
+    cisco    tty7         :0               Mon Jan 31 13:05 - crash  (-1:50)
+    reboot   system boot  5.4.0-96-generic Mon Jan 31 10:05   still running
+    cisco    pts/2        localhost        Mon Jan 31 01:17 - 01:26  (00:09)
+    cisco    tty7         :0               Mon Jan 31 01:08 - crash  (08:56)
+    reboot   system boot  5.4.0-96-generic Sun Jan 30 22:08   still running
+    cisco    tty7         :0               Sun Jan 30 22:51 - crash  (-00:43)
+    reboot   system boot  5.4.0-96-generic Sun Jan 30 19:51   still running
+    cisco    tty7         :0               Sun Jan 23 17:02 - crash (7+02:49)
+    reboot   system boot  5.4.0-96-generic Sun Jan 23 14:02   still running
+    cisco    tty7         :0               Sun Jan 23 16:38 - crash  (-2:36)
+    reboot   system boot  5.4.0-96-generic Sun Jan 23 16:38   still running
+    cisco    tty7         :0               Sun Jan 23 13:25 - 16:38  (03:13)
+    reboot   system boot  5.4.0-67-generic Sun Jan 23 10:25 - 16:38  (06:13)
+    joe      tty9         :2               Sun Jan 23 00:43 - crash  (09:41)
+    jenny    tty8         :1               Sat Jan 22 23:52 - crash  (10:32)
+    cisco    tty7         :0               Sat Jan 22 22:38 - crash  (11:46)
+    reboot   system boot  5.4.0-67-generic Sat Jan 22 19:38 - 16:38  (20:59)
+    cisco    tty7         :0               Sat Jan 22 16:23 - crash  (03:15)
+    reboot   system boot  5.4.0-67-generic Sat Jan 22 13:22 - 16:38 (1+03:15)
+    cisco    tty7         :0               Sat Jan 22 15:15 - crash  (-1:52)
+    reboot   system boot  5.4.0-67-generic Sat Jan 22 12:15 - 16:38 (1+04:23)
+    cisco    tty7         :0               Fri Jan 21 23:54 - crash  (12:20)
+    reboot   system boot  5.4.0-67-generic Fri Jan 21 20:54 - 16:38 (1+19:43)
+    cisco    tty7         :0               Fri Jan 21 14:22 - crash  (06:31)
+    reboot   system boot  5.4.0-67-generic Fri Jan 21 11:22 - 16:38 (2+05:15)
+    cisco    tty7         :0               Fri Jan 21 11:58 - crash  (-00:36)
+    reboot   system boot  5.4.0-67-generic Fri Jan 21 08:58 - 16:38 (2+07:39)
+    cisco    tty7         :0               Wed Jan 19 13:46 - crash (1+19:12)
+    reboot   system boot  5.4.0-67-generic Wed Jan 19 10:45 - 16:38 (4+05:52)
+    cisco    tty7         :0               Tue Jan 18 23:52 - crash  (10:53)
+    reboot   system boot  5.4.0-67-generic Tue Jan 18 20:52 - 16:38 (4+19:45)
+    cisco    tty2                          Thu Mar 18 21:47 - 21:47  (00:00)
+    reboot   system boot  5.4.0-67-generic Thu Mar 18 21:43 - 22:02  (00:18)
+    
+    wtmp begins Thu Mar 18 21:43:54 2021
+    root@labvm:/home/cisco# 
+
+d) Ingresé el comando exit para volver al usuario de Cisco
+
+    root@labvm:/home/cisco# exit
+    exit
+    cisco@labvm:~$ 
