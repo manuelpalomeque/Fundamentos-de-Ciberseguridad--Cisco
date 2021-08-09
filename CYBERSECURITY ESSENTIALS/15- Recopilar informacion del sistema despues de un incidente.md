@@ -154,7 +154,80 @@ Escribi q cuando termine.
     Mon 31 Jan 2022 02:39:22 PM UTC
     (END)
 
+## Parte 3: analice diferentes archivos de registro y aprenda su importancia
 
-=======
->>>>>>> 1f735ee38b66aa1256322aee64e92c9ec5761e83
+Además de capturar la información almacenada en la memoria RAM, el sistema también mantiene una variedad de registros
+que debe revisar después de un incidente. Estos archivos de registro también pueden agregarse a su archivo report.txt 
+o almacenarse por separado fuera del sistema en caso de que sea necesario borrar el sistema. Los registros de 
+particular interés incluyen, entre otros, los siguientes:
+
+-  auth.log: registra la información de autorización del sistema
+-  btmp.log: registra los intentos fallidos de inicio de sesión
+-  wtmp.log: registra quién está conectado actualmente al sistema
+
+a) Use el comando cat para ver auth.log y canalícelo al comando less. Presione la barra espaciadora para desplazarse 
+hacia abajo por página o presione Enter para desplazarse hacia abajo por una sola línea. Escriba q cuando termine. Su 
+salida será diferente.
+
+    root@labvm:/home/cisco# cat /var/log/auth.log | less
+    Jan 30 19:51:50 labvm useradd[727]: failed adding user 'vboxadd', data deleted
+    Jan 30 22:51:53 labvm lightdm: pam_unix(lightdm-autologin:session): session opened for user cisco by (uid=0)
+    Jan 30 22:51:53 labvm systemd-logind[451]: New session c1 of user cisco.
+    Jan 30 22:51:53 labvm systemd: pam_unix(systemd-user:session): session opened for user cisco by (uid=0)
+    Jan 30 22:51:54 labvm gnome-keyring-daemon[1212]: couldn't access control socket: /run/user/900/keyring/control: No such file or directory
+    Jan 30 22:51:55 labvm gnome-keyring-daemon[1212]: The PKCS#11 component was already initialized
+    Jan 30 22:51:55 labvm gnome-keyring-daemon[1212]: The Secret Service was already initialized
+    Jan 30 22:51:55 labvm gnome-keyring-daemon[1212]: The SSH agent was already initialized
+    Jan 30 22:51:56 labvm polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.45 [/usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1], object path 
+    /org/mate/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+    Jan 30 22:52:57 labvm sudo:    cisco : TTY=pts/0 ; PWD=/home/cisco ; USER=root ; COMMAND=/usr/bin/wireshark
+    Jan 30 22:52:57 labvm sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+    Jan 30 23:17:01 labvm CRON[2316]: pam_unix(cron:session): session opened for user root by (uid=0)
+    Jan 30 23:17:01 labvm CRON[2316]: pam_unix(cron:session): session closed for user root
+    Jan 30 23:30:01 labvm CRON[2478]: pam_unix(cron:session): session opened for user root by (uid=0)
+    Jan 30 23:30:01 labvm CRON[2478]: pam_unix(cron:session): session closed for user root
+    ^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@Jan 30 22:08:41 labvm systemd-logind[457]: New se
+    at seat0.
+    Jan 30 22:08:41 labvm systemd-logind[457]: Watching system buttons on /dev/input/event0 (Power Button)
+    Jan 30 22:08:41 labvm systemd-logind[457]: Watching system buttons on /dev/input/event1 (Sleep Button)
+    Jan 30 22:08:41 labvm systemd-logind[457]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+    Jan 30 22:08:41 labvm sshd[549]: Server listening on 0.0.0.0 port 22.
+    Jan 30 22:08:41 labvm sshd[549]: Server listening on :: port 22.
+    Jan 30 22:08:43 labvm useradd[584]: failed adding user 'vboxadd', data deleted
+    Jan 30 22:08:43 labvm useradd[585]: failed adding user 'vboxadd', data deleted
+    Jan 31 01:08:46 labvm lightdm: pam_unix(lightdm-autologin:session): session opened for user cisco by (uid=0)
+    Jan 31 01:08:46 labvm systemd-logind[457]: New session c1 of user cisco.
+    Jan 31 01:08:46 labvm systemd: pam_unix(systemd-user:session): session opened for user cisco by (uid=0)
+    Jan 31 01:08:47 labvm gnome-keyring-daemon[1079]: couldn't access control socket: /run/user/900/keyring/control: No such file or directory
+    Jan 31 01:08:48 labvm gnome-keyring-daemon[1079]: The PKCS#11 component was already initialized
+    Jan 31 01:08:48 labvm gnome-keyring-daemon[1079]: The Secret Service was already initialized
+    Jan 31 01:08:48 labvm gnome-keyring-daemon[1079]: The SSH agent was already initialized
+    Jan 31 01:08:48 labvm polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.51 [/usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1], object path 
+    /org/mate/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+    Jan 31 13:30:01 labvm CRON[2015]: pam_unix(cron:session): session closed for user root
+    ^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@Jan 31 11:15:00 labvm systemd-logind[451]: New seat seat0.
+    Jan 31 11:15:00 labvm systemd-logind[451]: Watching system buttons on /dev/input/event0 (Power Button)
+    Jan 31 11:15:00 labvm systemd-logind[451]: Watching system buttons on /dev/input/event1 (Sleep Button)
+    Jan 31 11:15:00 labvm systemd-logind[451]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+    Jan 31 11:15:00 labvm sshd[547]: Server listening on 0.0.0.0 port 22.
+    Jan 31 11:15:00 labvm sshd[547]: Server listening on :: port 22.
+    Jan 31 11:15:02 labvm useradd[588]: failed adding user 'vboxadd', data deleted
+    Jan 31 11:15:02 labvm useradd[589]: failed adding user 'vboxadd', data deleted
+    Jan 31 14:15:04 labvm lightdm: pam_unix(lightdm-autologin:session): session opened for user cisco by (uid=0)
+    Jan 31 14:15:04 labvm systemd-logind[451]: New session c1 of user cisco.
+    Jan 31 14:15:04 labvm systemd: pam_unix(systemd-user:session): session opened for user cisco by (uid=0)
+    Jan 31 14:15:05 labvm gnome-keyring-daemon[1034]: couldn't access control socket: /run/user/900/keyring/control: No such file or directory
+    Jan 31 14:15:05 labvm gnome-keyring-daemon[1034]: The PKCS#11 component was already initialized
+    Jan 31 14:15:05 labvm gnome-keyring-daemon[1034]: The Secret Service was already initialized
+    Jan 31 14:15:06 labvm gnome-keyring-daemon[1034]: The SSH agent was already initialized
+    Jan 31 14:15:06 labvm polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.39 [/usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1], object path /org/mate/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+    Jan 31 14:17:01 labvm CRON[1755]: pam_unix(cron:session): session opened for user root by (uid=0)
+    Jan 31 14:17:01 labvm CRON[1755]: pam_unix(cron:session): session closed for user root
+    Jan 31 14:19:40 labvm sudo:    cisco : TTY=pts/0 ; PWD=/home/cisco ; USER=root ; COMMAND=/usr/bin/su
+    Jan 31 14:19:40 labvm sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+    Jan 31 14:19:40 labvm su: (to root) root on pts/0
+    Jan 31 14:19:40 labvm su: pam_unix(su:session): session opened for user root by (uid=0)
+    Jan 31 14:30:01 labvm CRON[1797]: pam_unix(cron:session): session opened for user root by (uid=0)
+    Jan 31 14:30:01 labvm CRON[1797]: pam_unix(cron:session): session closed for user root
+    (END)
 
