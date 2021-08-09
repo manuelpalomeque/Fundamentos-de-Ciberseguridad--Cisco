@@ -70,6 +70,7 @@ i) Ingresé el comando date y agregue la fecha y la marca de tiempo al final del
     root@labvm:/home/cisco# echo =====End Date and Time===== >> report.txt
     root@labvm:/home/cisco# date >> report.txt
     root@labvm:/home/cisco# 
+<<<<<<< HEAD
 
 j) Usé el comando cat y canalice la salida al comando less para ver report.txt una página o línea a la vez. Presioné la 
 barra espaciadora para desplazarme hacia abajo por página, o Enter para desplazarse hacia abajo por una sola línea. 
@@ -154,4 +155,6 @@ Escribi q cuando termine.
     (END)
 
 
+=======
+>>>>>>> 1f735ee38b66aa1256322aee64e92c9ec5761e83
 
