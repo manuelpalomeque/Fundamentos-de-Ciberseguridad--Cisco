@@ -21,3 +21,43 @@ amenazas específicas.
 • Accept: la aceptación del riesgo implica la identificación de las amenazas, pero no la implementación de procesos de 
 mitigación solo después de que se haya tomado una decisión consciente para hacerlo. La decisión consciente se basa en 
 el análisis de los diversos componentes del riesgo antes de proceder.
+
+Paso 1: Gestionar el riesgo.
+
+En este Paso, describirá ejemplos de gestión de riesgos asociados con amenazas específicas a la información o los 
+sistemas de información de la organización.
+
+a) Regularmente se requiere que una organización maneje información confidencial de los clientes. La divulgación de esta
+información supone un grave riesgo para la organización.
+¿Qué pasos podría implementar la organización para eliminar el riesgo asociado con el envío accidental de correos 
+electrónicos o la transferencia de esta información?
+
+La organización puede implementar una política que prohíba a los empleados enviar correos electrónicos o transferir 
+datos de clientes. La organización también podría impedir que los empleados accedan a esta información. La organización 
+también podría filtrar y bloquear todos los datos enviados por correo electrónico o transferidos desde la red de la 
+organización.
+
+b) La organización ha tenido varios problemas con los empleados que comparten contraseñas o usan contraseñas débiles.
+
+Mencione dos formas de mitigar este riesgo:
+implementar políticas y pautas de contraseñas organizacionales, hacer cumplir el uso de contraseñas seguras en todos 
+los sistemas organizacionales.
+
+Paso 2: Explore los niveles de riesgo.
+
+El proceso de identificación y evaluación de riesgos de una organización es un esfuerzo continuo porque los tipos de 
+amenazas cambian y nunca desaparecen por completo. El objetivo de la gestión de riesgos es reducir estas amenazas a un 
+nivel aceptable. Vaya al siguiente sitio web https://mirrorlearning.org/emate2/risk_management/pub/risk_management/Assets/index.html 
+y revise la breve lección interactiva de Gestión de riesgos.
+
+Preguntas:
+Defina de los siguientes niveles de gestión de riesgos:
+
+*Negligencia: significa que no se toman medidas o controles para reducir el riesgo. La amenaza es muy alta y 
+el costo de un incidente podría ser catastrófico
+
+* Cuidado necesario: el debido cuidado implica tomar medidas razonables para reducir el nivel de riesgo. El riesgo aún 
+existe, pero los pasos razonables reducen una pérdida potencial.
+
+* Debida diligencia: la diligencia debida implica la adopción de medidas responsables para eliminar el riesgo. Todavía 
+existen algunos riesgos, pero se implementan múltiples controles para evitar pérdidas potenciales.
