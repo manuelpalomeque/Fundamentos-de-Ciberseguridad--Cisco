@@ -118,7 +118,7 @@ un ataque de ransomware, incendios, tornados, huracanes, terremotos, sistema da�
 del sistema o bajo rendimiento debido a malas configuraciones.
 
 Describa el impacto en la organización debido a las siguientes amenazas:
-<<<<<<< HEAD
+
  Violación de datos:El impacto podría variar desde la pérdida total del servidor de la base de datos hasta afectar las
 ventas y los ingresos de la organización. El impacto también podría incluir daños a la reputación comercial.
 
@@ -146,19 +146,67 @@ actualizados, copias de seguridad de datos, aplicación de políticas de segurid
 físico.
 
 ## Parte 3: Procesos de gestión de riesgos
-=======
- Violación de datos:
 
- Ransomware:
+La gestión de riesgos es un proceso formal que reduce el impacto de las amenazas y vulnerabilidades. No puede eliminar 
+el riesgo por completo, pero puede administrar el riesgo a un nivel aceptable. La gestión de riesgos mide el impacto de 
+una amenaza y el costo de implementar controles o contramedidas para mitigar la amenaza. Todas las organizaciones 
+aceptan algún riesgo. El costo de una contramedida no debe ser mayor que el valor del activo tu estas protegiendo
 
- Fallo de hardware:
+### Paso 1: Enmarcar y evaluar el riesgo
 
-Enumere una contramedida para las siguientes amenazas al servidor de la base de datos de la organización:
- Violación de datos:
+Identificar las amenazas en toda la organización que aumentan el riesgo. Las amenazas identificadas incluyen procesos, productos, ataques, fallas potenciales o interrupción de servicios, percepción negativa de la reputación de la organización, responsabilidad legal potencial o pérdida de propiedad intelectual. Una vez que se identifica un riesgo, se evalúa y analiza para determinar la gravedad que plantea la amenaza.
+Algunas amenazas pueden paralizar toda la organización, mientras que otras amenazas son inconvenientes menores.
+El riesgo se puede priorizar por el impacto financiero real (análisis cuantitativo) o un impacto a escala en el funcionamiento de la organización (análisis cualitativo). En nuestro ejemplo, se identificaron las siguientes vulnerabilidades. Asigne un valor cuantitativo a cada riesgo en función de las respuestas de su comité. Proporcione una justificación del valor que determinó.
 
- Ataque de ransomware:
+Pregunta:
+Utilice el estudio de caso para formular sus respuestas.
+ Violación de datos que afecta a todos los clientes:
+El impacto de una filtración de datos podría costar $100,000 o más y 5 días hábiles para restaurar los datos.
 
- Fallo de hardware:
+ Fallo del hardware del servidor que requiere reemplazo de hardware:
+El impacto de la falla del hardware podría costar $5,000 o más y 2 días hábiles para reemplazar el hardware defectuoso.
 
- Malware:
->>>>>>> 99f451d2ce0971f126385f9af74e00ed1dba37f1
+ Ransomware que afecta a toda la base de datos del servidor:
+El impacto del ataque de ransomware podría costar $20,000 o más y 5 días hábiles para restaurar los datos y eliminar 
+el ransomware
+
+ Inundación de la sala de servidores causada por la activación de los rociadores contra incendios:
+El impacto de la inundación podría costar $50,000 o más y 3 días hábiles para reemplazar el hardware dañado y 
+restaurar los datos.
+
+### Paso 2: Responda al riesgo
+
+Este paso implica desarrollar un plan de acción para reducir la exposición general al riesgo de la organización. Rangos 
+de gestión y prioriza las amenazas; luego, un equipo determina cómo responder a cada amenaza. El riesgo puede ser eliminado,
+mitigado, transferido o aceptado.
+
+Pregunta:
+Clasifique las vulnerabilidades y proponga posibles contramedidas para cada amenaza.
+ Violación de datos que afecta a todos los clientes:
+El impacto de una violación de datos es alto. Podría costar $100,000 o más y la confianza del cliente y la reputación 
+de la empresa. Algunas de las contramedidas pueden ser la capacitación de los empleados, el cifrado de datos y las 
+actualizaciones de software y hardware.
+
+ Fallo del hardware del servidor que requiere reemplazo de hardware:
+El impacto de la falla del hardware del servidor es mediano y podría costar $ 5,000 o más y la interrupción del 
+servicio. Algunas de las contramedidas pueden ser copias de seguridad de datos y del sistema.
+
+ Ransomware que afecta a toda la base de datos del servidor:
+El impacto del ataque de ransomware es bajo y podría costar $ 20,000 o más. Podría causar la interrupción del servicio 
+y la pérdida de datos. Algunas de las contramedidas pueden ser capacitación en seguridad y respaldo de datos.
+
+ Inundación de la sala de servidores causada por la activación de los rociadores contra incendios:
+El impacto del ataque de ransomware es bajo y podría costar $ 50,000 o más. Podría causar la interrupción del servicio 
+y la pérdida de datos. Algunas de las contramedidas pueden ser comprar un seguro y hacer una copia de seguridad de los 
+datos.
+
+### Paso 3: Supervisar el riesgo
+
+Revisar continuamente las reducciones de riesgo debido a acciones de eliminación, mitigación o transferencia. No todos 
+los riesgos se pueden eliminar, por lo que las amenazas que se aceptan deben ser monitoreadas de cerca. Es importante 
+entender que algún riesgo siempre está presente y es aceptable. A medida que se implementan las contramedidas, el 
+impacto del riesgo debería disminuir. Se requiere un monitoreo constante y la revisión de nuevas contramedidas.
+
+
+
+
