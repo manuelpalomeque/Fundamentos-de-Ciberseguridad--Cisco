@@ -73,3 +73,8 @@ Recopilé información del sistema después de que ocurrió un incidente. Revis�
 Realice el  proceso de identificación y evaluación de riesgos de una organización,ya que los tipos de amenazas cambian y
 nunca desaparecen por completo. El objetivo de la gestión de riesgos es reducir estas amenazas a un nivel aceptable.
 
+#### **_q) Análisis de riesgos:_**
+Utilizar Métodos de Análisis de Riesgos y Calcular Riesgos. Para determinar las posibles vulnerabilidades y amenazas, 
+su probabilidad y consecuencias, y las tolerancias para tales eventos. Los resultados de este proceso se expresan
+utilizando un método cuantitativo o un método cualitativo.
+
