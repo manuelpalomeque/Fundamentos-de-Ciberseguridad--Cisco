@@ -77,4 +77,25 @@ Calcule el SLE de un ataque de ransomware con un factor de exposición del 100 %
     SLE es igual a 135.000 x 1.0 = $135.000
 
 
+### Paso 3: Calcule la expectativa de pérdida única
+
+Calcule la expectativa de pérdida única (SLE) tomando el valor del activo y multiplicándolo por el factor de exposición.
+El resultado es la pérdida en dólares que espera debido a la ocurrencia de un solo evento. Un solo activo puede tener
+múltiples amenazas o vulnerabilidades potenciales, y se puede calcular una sola expectativa de pérdida para cada 
+ocurrencia.
+
+Por ejemplo, se estima que un ataque de denegación de servicio tiene un impacto o factor de exposición del 20% o 0,2. 
+Esto significaría que el SLE es de $135 000 x 0,2 = $27 000.
+
+Calcule el SLE si ocurre una falla en el disco duro o en la unidad de almacenamiento donde el mismo valor de activo se
+estima en $135,000. Este tipo de pérdida daría lugar a un factor de exposición de 0,5.
+
+Preguntas:
+¿Cual es el SLE?
+
+    SLE es igual a 135.000 x 0,5 = 67.500 dólares
+
+Calcule el SLE de un ataque de Ransomware con un índice de exposición del 100 % o 1,0.
+
+    SLE es igual a 135,000 x 1.0 = $135,000 
 
