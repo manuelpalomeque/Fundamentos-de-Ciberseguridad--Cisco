@@ -120,3 +120,20 @@ el servidor experimenta fallas de hardware cada 30 meses
 
     Si el evento ocurre cada treinta meses, el ARO sería 12/30 = 0.4.
 
+### Paso 5: Calcule la expectativa de pérdida anualizada
+
+La expectativa de pérdida anualizada (ALE) es el producto de la ARO y la SLE. Para calcular el ALE, tome el SLE y 
+multiplíquelo por el ARO. Por ejemplo, si se determina que un corte de energía tiene un SLE de $50,000.00 y un ARO de 
+0.5, el ALE sería de $25,000.
+
+Preguntas:
+¿Cuál es el ALE de una falla de hardware con el servidor de la base de datos del cliente si el SLE = $ 5,000 y 
+ARO = 2.5?
+
+     ALE = 5000 x 2,5 = 12500
+
+¿Cuál es el ALE de un ataque de piratería con el servidor de la base de datos del cliente si el SLE = $ 10,000 y ARO 
+= 0.5?
+
+    Answer: ALE = 10,000 x 0.5 = 5,000
+
