@@ -145,7 +145,7 @@ La probabilidad es la probabilidad de que ocurra el evento de amenaza.
 El análisis de riesgo cualitativo examina el nivel de impacto general en la organización. Estos problemas incluyen 
 pérdida de ingresos, pérdida de reputación y pérdida de clientes.
 
-IMAGEN 6
+<img src="https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/6.png">
 
 Utilice las tablas para registrar el impacto cualitativo de los eventos que se describen a continuación.
 
@@ -153,27 +153,36 @@ Preguntas:
 En el primer caso, el servidor web experimenta una falla en el disco duro que provoca una pérdida de ingresos, reputación y
 clientes. Este es un impacto de muy alto riesgo y una posible probabilidad de ocurrencia.
 
-    La respuesta correcta es Mayor.
+<img src="https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/7.png">
 
-IMAGEN 7
+    La respuesta correcta es Mayor
 
 En el segundo caso, se lanza un ataque de denegación de servicio contra el servidor web. Se trata de un impacto de alto 
 riesgo y probable probabilidad de ocurrencia.
 
-IMAGEN 8
+<img src="https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/8.png">
+
+    La respuesta correcta es Mayor
 
 En el tercer evento, hay un incendio en la sala de servidores. Este es un impacto de muy alto riesgo y una rara 
 probabilidad de ocurrencia.
 
-IMAGEN 9
+<img src="https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/9.png">
+
+    La respuesta correcta es Moderada.
 
 En el cuarto evento, los datos de la tarjeta de crédito han sido robados. Este es un impacto de muy alto riesgo y una 
 probabilidad de ocurrencia poco probable.
 
-IMAGEN 10
+<img src=" https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/10.png">
+
+    La respuesta correcta es Mayor
 
 En el quinto evento, hay un tornado en el área. Este es un impacto de bajo riesgo y una rara probabilidad de 
 ocurrencia.
 
-IMAGEN 11
+<img src="https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/11.png">
+
+    La respuesta correcta es Menor.
+
 
