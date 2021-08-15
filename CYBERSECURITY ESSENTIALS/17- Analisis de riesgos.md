@@ -99,3 +99,24 @@ Calcule el SLE de un ataque de Ransomware con un índice de exposición del 100 
 
     SLE es igual a 135,000 x 1.0 = $135,000 
 
+### Paso 4: Calcular la Tasa de Ocurrencia Anualizada
+
+La tasa anualizada de ocurrencia (ARO) es una medida de la frecuencia con la que ocurre un evento en un solo año. ARO 
+siempre se expresa en una calificación anual incluso si ocurre un incidente y se registra en otras medidas de tiempo. 
+En nuestro ejemplo, el servidor de la base de datos del cliente se ve afectado por un ataque DoS o DDoS cada 120 días 
+o 4 meses en promedio. Esto significa que el evento ocurrirá tres veces en un año calendario en promedio, por lo que el 
+ataque DoS/DDoS tiene un ARO de 3. 
+
+En este escenario, calcule el ARO de un ataque de ransomware en el servidor de la base de datos del cliente comercial.
+En promedio, el servidor experimenta ataques de ransomware cada 24 meses o dos años.
+
+Pregunta:
+¿Cuál es el ARO de un ataque de ransomware en el servidor de la base de datos del cliente?
+
+    Si el evento ocurre cada veinticuatro meses, el ARO sería 12/24 = 0.5.
+
+En este escenario, calcule el ARO de una falla de hardware con el servidor de la base de datos del cliente. En promedio,
+el servidor experimenta fallas de hardware cada 30 meses
+
+    Si el evento ocurre cada treinta meses, el ARO sería 12/30 = 0.4.
+
