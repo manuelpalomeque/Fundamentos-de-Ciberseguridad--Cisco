@@ -137,3 +137,43 @@ ARO = 2.5?
 
     Answer: ALE = 10,000 x 0.5 = 5,000
 
+### Paso 6: Calcular el Análisis de Riesgo Cualitativo
+
+Un análisis cualitativo compara el impacto de una amenaza con la probabilidad de que ocurra y utiliza etiquetas como 
+bajo, medio o alto. El impacto de un evento es una medida de la pérdida cuando una amenaza explota una vulnerabilidad. 
+La probabilidad es la probabilidad de que ocurra el evento de amenaza.
+El análisis de riesgo cualitativo examina el nivel de impacto general en la organización. Estos problemas incluyen 
+pérdida de ingresos, pérdida de reputación y pérdida de clientes.
+
+IMAGEN 6
+
+Utilice las tablas para registrar el impacto cualitativo de los eventos que se describen a continuación.
+
+Preguntas:
+En el primer caso, el servidor web experimenta una falla en el disco duro que provoca una pérdida de ingresos, reputación y
+clientes. Este es un impacto de muy alto riesgo y una posible probabilidad de ocurrencia.
+
+    La respuesta correcta es Mayor.
+
+IMAGEN 7
+
+En el segundo caso, se lanza un ataque de denegación de servicio contra el servidor web. Se trata de un impacto de alto 
+riesgo y probable probabilidad de ocurrencia.
+
+IMAGEN 8
+
+En el tercer evento, hay un incendio en la sala de servidores. Este es un impacto de muy alto riesgo y una rara 
+probabilidad de ocurrencia.
+
+IMAGEN 9
+
+En el cuarto evento, los datos de la tarjeta de crédito han sido robados. Este es un impacto de muy alto riesgo y una 
+probabilidad de ocurrencia poco probable.
+
+IMAGEN 10
+
+En el quinto evento, hay un tornado en el área. Este es un impacto de bajo riesgo y una rara probabilidad de 
+ocurrencia.
+
+IMAGEN 11
+
