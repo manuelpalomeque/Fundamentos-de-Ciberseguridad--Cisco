@@ -185,4 +185,26 @@ ocurrencia.
 
     La respuesta correcta es Menor.
 
+## Parte 2: Calcular riesgos
 
+### Paso 1: Escenario de portátiles de la empresa ABC
+
+Pregunta:
+ABC Company posee 65 computadoras portátiles. Cada computadora portátil cuesta $ 1,200. Basará sus cálculos en el valor 
+de una computadora portátil. El equipo identificó tres amenazas. Con base en datos internos, calcule el ARO y el ALE 
+con la información proporcionada. Introduzca los valores que faltan en la tabla
+
+
+    Evento de amenaza   SLE     EF              Tasa de ocurrencia      ARO     ALE
+
+    Robo de Equipo      $1200   100% (1.0)      Una vez cada 2 años     0.5     $600
+    Daño por caída      $720    60%(0.6)        Una vez cada 5 años     0.2     $144
+    Malware             $240    20% (0.2)       Dos veces al año        2       $480
+                                            Total ALE para todas las amenazas $1,224
+
+### Paso 2: Escenario de red de área de almacenamiento de empresa ABC
+
+La empresa ABC está realizando un análisis de riesgo para su red de área de almacenamiento. El valor total de los 
+activos es de $ 250,000. El equipo identificó las tres amenazas que se muestran en la tabla. Los datos del fabricante y 
+los registros de la empresa proporcionaron los datos que figuran en la tabla. Introduzca los valores que faltan en la 
+tabla.
