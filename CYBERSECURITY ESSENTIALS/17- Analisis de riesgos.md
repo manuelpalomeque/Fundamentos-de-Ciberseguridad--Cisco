@@ -174,7 +174,7 @@ probabilidad de ocurrencia.
 En el cuarto evento, los datos de la tarjeta de crédito han sido robados. Este es un impacto de muy alto riesgo y una 
 probabilidad de ocurrencia poco probable.
 
-<img src=" https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/10.png">
+<img src="https://github.com/manuelpalomeque/Fundamentos-de-Ciberseguridad--Cisco/blob/main/CYBERSECURITY%20ESSENTIALS/Capturas%20de%20pantallas/10.png">
 
     La respuesta correcta es Mayor
 
