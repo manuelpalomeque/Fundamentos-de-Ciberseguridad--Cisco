@@ -78,3 +78,10 @@ Utilizar Métodos de Análisis de Riesgos y Calcular Riesgos. Para determinar la
 su probabilidad y consecuencias, y las tolerancias para tales eventos. Los resultados de este proceso se expresan
 utilizando un método cuantitativo o un método cualitativo.
 
+#### **_s) Desarrollar políticas y procedimientos de ciberseguridad:_**
+Revise el contexto en el cual se desarrolla el ejercicio, desarrolle una política de seguridad de la información para 
+abordar las vulnerabilidades existentes identificadas por una auditoría interna. 
+Revisar y priorizar los hallazgos de la auditoría, desarrolle documentos de política y un plan de Divulgación y 
+Evaluación de Políticas
+
+

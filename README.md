@@ -30,6 +30,7 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
     15- Recopilar información del sistema después de un incidente
     16- Gestión de riesgos
     17- Análisis de riesgos
+    18- Desarrollar políticas y procedimientos de ciberseguridad
 
 
 
