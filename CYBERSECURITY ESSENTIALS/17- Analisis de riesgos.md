@@ -208,3 +208,57 @@ La empresa ABC está realizando un análisis de riesgo para su red de área de a
 activos es de $ 250,000. El equipo identificó las tres amenazas que se muestran en la tabla. Los datos del fabricante y 
 los registros de la empresa proporcionaron los datos que figuran en la tabla. Introduzca los valores que faltan en la 
 tabla.
+
+    Amenaza Evento          SLE         EF              Tasa de ocurrencia      ARO     ALE
+    
+    Falla de la unidad      $12.500     5 % (0,05)      Dos veces al año        2       $25.000
+    Corte de energía        $250.000    100% (1.0)      Una vez cada 8 años     0.125   $31.250
+    Ataque DOS/DDOS         $25.000     10% (0.1)       Una vez cada 2 años     0.5     $12.500
+                                                      ALE total para todas las amenazas $68,750
+
+### Paso 3: Escenario de amenazas del servidor de la base de datos de la empresa ABC
+
+Pregunta:
+ABC Company gastó $18,000 en un servidor de base de datos. La configuración e instalación totalizaron $2,000. Completo
+la tabla de desafío del análisis de riesgos basada en las cuatro amenazas identificadas por el equipo de ABC. 
+Introduzca los valores que faltan en la tabla
+
+    Amenaza Evento              SLE         EF              Tasa de ocurrencia      ARO     ALE
+
+    Falla del dispositivo       $1,000      5% (.05)        Una vez cada 18 meses   0.66    $666
+    Corte de energía            $20,000     100% (1.0)      Una vez cada 5 años     0.2     $4,000
+    Ataque DOS/DDOS             $3,000      15% (0.15)      Una vez cada 4 años     0.25    $750
+    Robo de Información         $8,000      40% (0.4)       Una vez cada 2 años     0.5     $4,000
+    Errores de configuración    $200        1% (0.01)       Una vez al mes          12      $2,400
+                                                          ALE total para todas las amenazas $11,816
+
+### Paso 4: escenario de desafío del sistema de punto de venta de la empresa ABC
+
+Pregunta:
+ABC Company gastó $10,000 en su sistema de punto de venta remoto. La configuración e instalación totalizaron $5,000. 
+Complete la tabla con base en las cuatro amenazas identificadas por el equipo de ABC. Introduzca los valores que 
+faltan en la tabla.
+
+    Amenaza Evento      SLE         EF              Tasa de ocurrencia      ARO     ALE
+    
+    Robo de Equipo      $15,000     100% (1.0)      Una vez cada 5 años     0.2     $3,000
+    Falla del equipo    $1500       10 % (0,1)      Dos veces al año        2       $3000
+    Ransomware          $3,000      20% (0.2)       Una vez cada 10 años    0.1     $300
+    Violación de datos  $6,000      40% (0.4)       Una vez cada 5 años     0.2     $1,200
+                                                  ALE total para todas las amenazas $7,50
+
+### Paso 5: escenario de desafío de la instalación de nube privada de la empresa ABC
+
+Pregunta:
+BC Company gastó $ 500,000 en el desarrollo y la compra de una instalación de nube privada. Configuración y
+la instalación ascendió a $50.000 y la programación y desarrollo de aplicaciones costó otros $450.000.
+Complete la tabla Desafío del análisis de riesgos en función de las cuatro amenazas identificadas por el equipo de ABC. 
+Introduzca los valores que faltan en la tabla.
+
+    Amenaza Evento      SLE         EF              Tasa de ocurrencia      ARO     ALE
+
+    Corte de energía    $500,000    50% (0.5)       Una vez cada 5 años     0.2     $100,000
+    Ataque DOS/DDOS     $400 000    40 % (0,4)      Una vez cada 2 años     0,5     $200 000
+    Violación de datos  $400 000    40 % (0,4)      Una vez cada 10 años    0,1     $40 000
+    Inundación          $1,000,000  100% (1.0)      Una vez cada 20 años    0.05    $50,000
+                                                  ALE total para todas las amenazas $390,000
