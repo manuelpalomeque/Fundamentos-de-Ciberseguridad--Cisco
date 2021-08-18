@@ -84,4 +84,13 @@ abordar las vulnerabilidades existentes identificadas por una auditoría interna
 Revisar y priorizar los hallazgos de la auditoría, desarrolle documentos de política y un plan de Divulgación y 
 Evaluación de Políticas
 
+#### **_t) Desafío de integración de habilidades:_**
+Configuré una red inalámbrica dentro del sitio principal, establecí una conexión VPN de acceso remoto entre los sitios 
+del Café y el Centro de datos, y restauré una conexión VPN de sitio a sitio entre los sitios de la sede y la sucursal.
+También realicé otras tareas adicionales: incluido el registro de dispositivos con un servidor IoT, la verificación 
+remota de los dispositivos IoT que envían datos, la configuración de correo electrónico, la validación de la integridad 
+de los archivos, la configuración del acceso inalámbrico del usuario en la sede central, la adición de una cuenta FTP 
+y el descifrado de las credenciales del usuario, restaurar la configuración de un enrutador y hacer una copia de 
+seguridad de la configuración de un enrutador.
+
 
