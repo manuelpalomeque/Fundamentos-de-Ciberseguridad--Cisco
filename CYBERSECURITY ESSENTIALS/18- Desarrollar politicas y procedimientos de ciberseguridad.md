@@ -29,3 +29,104 @@ sistemas de datos de la empresa.
 15) El servidor web de la intranet permitía a los usuarios cambiar su información personal, incluida la información de 
 contacto.
 
+## Parte 1: Revisión del Escenario
+
+Lea el escenario dado arriba. Mire el video de la Política de seguridad de la información. Tome notas que le ayuden a 
+diferenciar los distintos niveles y tipos de pólizas.
+
+## Parte 2: Revisar y priorizar los hallazgos de la auditoría
+
+a) Investigue los tipos de vulnerabilidades enumeradas para determinar cuál de ellas representa la mayor amenaza. Vaya 
+a Principales vulnerabilidades de seguridad informática para obtener más información.
+b) Según su investigación, enumere los cinco principales hallazgos de auditoría de seguridad que ACME debe abordar, 
+comenzando con la mayor vulnerabilidad.
+c) Registre sus clasificaciones en una tabla de clasificación de vulnerabilidades, como la que se muestra a 
+continuación. Enumera las vulnerabilidades, la política recomendada para mitigar esta vulnerabilidad y su 
+justificación para la clasificación que determinó.
+
+Tabla de clasificación de vulnerabilidades
+
+    1) Vulnerabilidad:
+    Se identificaron varias cuentas para empleados que ya no están empleados por ACME.
+
+    Política recomendada:
+    Cuando un empleado deja la empresa:
+    • Revisar todos los permisos de acceso
+    • Recuperar datos del empleado si corresponde
+    • Terminar el acceso y restablecer todas las contraseñas
+
+    Justificación:
+    El exempleado puede obtener acceso no autorizado a información y equipos de propiedad y confidenciales.
+    Cualquier persona con las credenciales del ex empleado puede obtener acceso no autorizado al sistema interno.
+    
+    ---------------------------------------------------------------------
+
+    2) Vulnerabilidad:
+    Varias cuentas de usuario permitieron privilegios no autorizados y escalados y accedieron a sistemas e información 
+    sin autorización formal.
+    
+    Política recomendada:
+    • Asignar el privilegio mínimo para realizar la tarea
+    • Registrar cuando se usan privilegios elevados
+    
+    Justificación:
+    El privilegio mínimo le permite al usuario realizar todas las tareas necesarias sin el riesgo de causar cambios 
+    sistémicos sin querer.
+
+    ---------------------------------------------------------------------
+
+    3) Vulnerabilidad:
+    Varios dispositivos y sistemas permitieron el acceso remoto no seguro.
+    
+    Política recomendada:
+    • Deshabilite el acceso remoto no seguro, como Telnet
+    • Requerir acceso remoto seguro, como SSH y VPN
+    
+    Justificación:
+    El acceso remoto no seguro transmite los datos en texto sin formato. La transmisión de texto sin formato puede exponer 
+    información confidencial, como las credenciales de los usuarios, para que los actores maliciosos realicen 
+    reconocimientos y ataques.
+
+    ---------------------------------------------------------------------
+
+    4) Vulnerabilidad:
+    El cuarenta por ciento de todas las contraseñas de organizaciones auditadas se descifraron en 6 horas.
+    
+    Política recomendada:
+    Nueva política de contraseñas:
+    • Implementar 2FA o MFA
+    • Contraseñas de usuario
+    • Cambie las contraseñas solo después de evidencia de compromiso
+    • Sin reutilización de contraseñas antiguas
+    • Sin reutilización de contraseñas en diferentes aplicaciones
+    • Habilitar copiar/pegar contraseñas
+    • Educar a los usuarios sobre ciberseguridad básica
+    
+    Justificación:
+    Cuando se descifran las contraseñas, el atacante puede obtener acceso no autorizado y cambiar las contraseñas para 
+    bloquear a los usuarios autorizados.
+
+    ---------------------------------------------------------------------
+
+    5) Vulnerabilidad:
+    Varios puntos de acceso inalámbricos usaban WEP para el cifrado y la autenticación.
+    
+    Política recomendada:
+    Actualice los puntos de acceso inalámbricos al cifrado y la autenticación más seguros disponibles
+    
+    Justificación:
+    WEP es propenso a ataques de intermediarios y la clave se descifra fácilmente y es difícil de distribuir a los usuarios.
+
+    ---------------------------------------------------------------------
+
+    6) Vulnerabilidad:
+    Los servidores de la empresa no se actualizaron con los últimos parches.
+    
+    Política recomendada:
+    Establezca un plan para actualizar/probar los últimos parches a intervalos regulares.
+    
+    Justificación:
+    La actualización regular puede proteger los datos, corregir la vulnerabilidad de seguridad y mejorar la estabilidad 
+    del sistema operativo y las aplicaciones.
+
+
