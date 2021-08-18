@@ -31,6 +31,9 @@ En la carpeta creada en este repositorio se encuentran desarrollados los siguien
     16- Gestión de riesgos
     17- Análisis de riesgos
     18- Desarrollar políticas y procedimientos de ciberseguridad
+    19- Desafío de integración de habilidades
+
+
 
 
 
