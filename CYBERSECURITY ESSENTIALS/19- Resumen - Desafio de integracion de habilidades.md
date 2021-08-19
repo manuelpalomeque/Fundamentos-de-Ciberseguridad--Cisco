@@ -198,3 +198,10 @@ Home Doors
     DNS Server: 10.2.0.125
 
 
+### Paso 4: Registre los dispositivos IoT domésticos en el servidor de registro de IoT
+
+    direccion: 10.3.0.125
+    usuario: admin
+    clave: admin
+
+
