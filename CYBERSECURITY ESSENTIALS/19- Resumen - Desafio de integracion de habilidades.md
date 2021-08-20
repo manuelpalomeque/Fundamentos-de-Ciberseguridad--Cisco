@@ -208,6 +208,10 @@ Home Doors
 
 ### Paso 4: Cargue un archivo en el sitio FTP de DC.
 
+usuario: jose
+clave: josepass
+
+
     C:\>ftp 172.19.0.3
     Trying to connect...172.19.0.3
     Connected to 172.19.0.3
@@ -238,4 +242,51 @@ Home Doors
     
     221- Service closing control connection.
     C:\>
+
+### Paso 5: Enviar un correo electrónico a Mariel sobre la carga del archivo.
+
+a) 
+
+    Hi Mariel,
+    I have uploaded the file Instructions.txt to the DC_FTP Server (172.19.0.3). The MD5sum hash for the file is 0b9b2d509aab15df7e7eb2eca105b3a9
+    
+    In a terminal window in the VM, enter the following command, pasting the contents of your clipboard in place of 'file-contents', to verify the files integrity:
+    echo -n 'file-contents' | md5sum
+    
+    The hash (Instructions_Hash.html) is also stored at www.ptsecurity.com for public use.
+    Thanks,
+    Jose
+
+### Paso 6: Verifique la integridad del archivo cargado en el servidor FTP.
+
+username: mariel
+clave: marielpass
+
+    C:\>ftp 172.19.0.3
+    Trying to connect...172.19.0.3
+    Connected to 172.19.0.3
+    220- Welcome to PT Ftp server
+    Username:mariel
+    331- Username ok, need password
+    Password:
+    230- Logged in
+    (passive mode On)
+    ftp>dir
+    
+    Listing /ftp directory from 172.19.0.3: 
+    0   : Instructions.txt                                   1303
+    1   : PTsecurity.txt                                     92
+    ftp>get Instructions.txt
+    
+    Reading file Instructions.txt from 172.19.0.3: 
+    File transfer in progress...
+    
+    [Transfer complete - 1303 bytes]
+    
+    1303 bytes copied in 0.156 secs (8352 bytes/sec)
+    ftp>quit
+    
+    221- Service closing control connection.
+    C:\>
+
 
