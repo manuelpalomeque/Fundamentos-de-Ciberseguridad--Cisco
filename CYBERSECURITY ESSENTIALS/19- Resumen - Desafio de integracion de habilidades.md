@@ -204,4 +204,5 @@ Home Doors
     usuario: admin
     clave: admin
 
+## Parte 2: configurar y usar una VPN de acceso remoto
 
