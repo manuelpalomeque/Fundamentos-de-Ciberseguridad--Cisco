@@ -206,3 +206,36 @@ Home Doors
 
 ## Parte 2: configurar y usar una VPN de acceso remoto
 
+### Paso 4: Cargue un archivo en el sitio FTP de DC.
+
+    C:\>ftp 172.19.0.3
+    Trying to connect...172.19.0.3
+    Connected to 172.19.0.3
+    220- Welcome to PT Ftp server
+    Username:jose
+    331- Username ok, need password
+    Password:
+    230- Logged in
+    (passive mode On)
+    ftp>dir
+    
+    Listing /ftp directory from 172.19.0.3: 
+    0   : PTsecurity.txt                                     92
+    ftp>put Instructions.txt
+    
+    Writing file Instructions.txt to 172.19.0.3: 
+    File transfer in progress...
+    
+    [Transfer complete - 1303 bytes]
+    
+    1303 bytes copied in 0.041 secs (31780 bytes/sec)
+    ftp>dir
+    
+    Listing /ftp directory from 172.19.0.3: 
+    0   : Instructions.txt                                   1303
+    1   : PTsecurity.txt                                     92
+    ftp>quit
+    
+    221- Service closing control connection.
+    C:\>
+
