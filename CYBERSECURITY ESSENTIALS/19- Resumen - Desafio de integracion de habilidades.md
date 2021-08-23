@@ -358,3 +358,34 @@ c)
     Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.2.0.0 0.0.255.255
     Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.3.0.0 0.0.255.255
     Branch(config)#
+
+
+4-d)
+
+    Authorized Access Only!
+    
+    User Access Verification
+    
+    Password: 
+    
+    Branch>enable
+    Password: 
+    Branch#config t
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    Branch(config)#ip ftp username username
+    Branch(config)#ip ftp password password
+    Branch(config)#end
+    Branch#
+    %SYS-5-CONFIG_I: Configured from console by console
+
+4-e)
+
+    Branch>ping 192.168.75.2
+    
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 192.168.75.2, timeout is 2 seconds:
+    .!!!!
+    Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+
+    Branch>
+
