@@ -323,4 +323,38 @@ c)
 ## Parte 3: configurar y usar una VPN de sitio a sitio
 
 
+### Paso 3: Restaure y verifique la VPN de sitio a sitio.
 
+b)
+
+    %DHCPD-4-PING_CONFLICT: DHCP address conflict:  server pinged 10.0.3.102.
+    Authorized Access Only!
+    
+    User Access Verification
+    
+    Password: 
+    
+    Branch>enable
+    Password: 
+    Branch# copy tftp running-config
+    Address or name of remote host []? 10.0.3.30
+    Source filename []? Branch-config
+    Destination filename [running-config]? 
+    
+    Accessing tftp://10.0.3.30/Branch-config....
+    Loading Branch-config from 10.0.3.30: !
+    [OK - 2546 bytes]
+    
+    2546 bytes copied in 3.004 secs (847 bytes/sec)
+    Branch#
+    %SYS-5-CONFIG_I: Configured from console by console
+
+c)
+
+    Branch#config t
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    Branch(config)#no access-list 102
+    Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.1.0.0 0.0.255.255
+    Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.2.0.0 0.0.255.255
+    Branch(config)#access-list 102 permit ip 10.0.3.0 0.0.0.255 10.3.0.0 0.0.255.255
+    Branch(config)#
