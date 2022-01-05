@@ -80,3 +80,30 @@ D) Detectar las versiones que puede usar para investigar vulnerabilidades, media
     Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
     Nmap done: 1 IP address (1 host up) scanned in 6.45 seco
 
+#2) capturar claves SSH:
+
+a) Iniciar un escaneo de secuencias de comandos para capturar las claves SSH para el sistema host:
+
+    cisco@labvm:~$ nmap -A localhost
+    Starting Nmap 7.80 ( https://nmap.org ) at 2022-01-19 14:02 UTC
+    Nmap scan report for localhost (127.0.0.1)
+    Host is up (0.000027s latency).
+    Other addresses for localhost (not scanned): ::1
+    Not shown: 997 closed ports
+    PORT    STATE SERVICE VERSION
+    22/tcp  open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+    | ssh-hostkey: 
+    |   3072 56:68:77:00:41:7f:50:17:5b:73:82:36:47:c4:bc:2d (RSA)
+    |   256 0e:52:78:ba:08:2a:df:e5:be:1b:07:a7:98:3a:c8:50 (ECDSA)
+    |_  256 f7:9e:03:10:96:94:cc:f4:4f:2a:f2:7c:6a:37:c1:6f (ED25519)
+    23/tcp  open  telnet  Linux telnetd
+    631/tcp open  ipp     CUPS 2.3
+    | http-robots.txt: 1 disallowed entry 
+    |_/
+    |_http-server-header: CUPS/2.3 IPP/2.1
+    |_http-title: Home - CUPS 2.3.1
+    Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+    
+    Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+    Nmap done: 1 IP address (1 host up) scanned in 13.47 seconds
+
