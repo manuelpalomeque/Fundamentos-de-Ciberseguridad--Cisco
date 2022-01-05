@@ -13,3 +13,4 @@ https://skillsforall.com/resources/lab-downloads
 ### 👉 CYBERSECURITY ESSENTIALS:
 
       01- Construir una red doméstica
+      02- Use un escáner de puertos para detectar puertos abiertos (NMAP)
