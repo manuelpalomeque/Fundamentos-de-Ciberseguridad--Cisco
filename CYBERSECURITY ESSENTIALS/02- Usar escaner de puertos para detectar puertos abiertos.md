@@ -1,4 +1,4 @@
-# 1) Ejecutar Nmap:
+## 1) Ejecutar Nmap:
 
 A) Ejecutar un escaneo básico contra este sistema:
 
@@ -80,7 +80,24 @@ D) Detectar las versiones que puede usar para investigar vulnerabilidades, media
     Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
     Nmap done: 1 IP address (1 host up) scanned in 6.45 seco
 
-#2) capturar claves SSH:
+## 2) Usar privilegios administrativos con Nmap:
+a) Escanear los puertos UDP de la computadora:
+
+    cisco@labvm:~$ sudo nmap -sU localhost
+    [sudo] password for cisco: 
+    Starting Nmap 7.80 ( https://nmap.org ) at 2022-01-19 14:17 UTC
+    Nmap scan report for localhost (127.0.0.1)
+    Host is up (0.0000020s latency).
+    Other addresses for localhost (not scanned): ::1
+    Not shown: 998 closed ports
+    PORT     STATE         SERVICE
+    631/udp  open|filtered ipp
+    5353/udp open|filtered zeroconf
+    
+    Nmap done: 1 IP address (1 host up) scanned in 1.34 seconds
+
+
+## 3) Capturar claves SSH:
 
 a) Iniciar un escaneo de secuencias de comandos para capturar las claves SSH para el sistema host:
 
@@ -107,3 +124,13 @@ a) Iniciar un escaneo de secuencias de comandos para capturar las claves SSH par
     Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
     Nmap done: 1 IP address (1 host up) scanned in 13.47 seconds
 
+b)¿Cuáles son los valores de las claves de host SSH?
+
+    | 3072 56:68:77:00:41:7f:50:17:5b:73:82:36:47:c4:bc:2d (RSA)
+    | 256 0e:52:78:ba:08:2a:df:e5:be:1b:07:a7:98:3a:c8:50 (ECDSA)
+    |_ 256 f7:9e:03:10:96:94:cc:f4:4f:2a:f2:7c:6a:37:c1:6f (ED25519)
+
+
+c)¿Cómo usaría un atacante esta información?
+
+d)¿Cómo podría evitar que el atacante cibernético robe la información clave?
