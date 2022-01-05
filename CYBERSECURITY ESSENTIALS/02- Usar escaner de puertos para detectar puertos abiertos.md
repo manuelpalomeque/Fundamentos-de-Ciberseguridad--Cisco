@@ -61,3 +61,22 @@ Ejemplo:
 Vulnerabilidad  en la implementación del Protocolo de impresión de Internet (IPP) en CUPS antes de 1.1.19 permite a 
 atacantes remotos causar una denegación de servicio a través de ciertas entradas al puerto IPP (TCP 631).
 Referencias: [ CVE-2003-0788 ] [ BID-8952 ] [SECUNIA-10123]
+
+D) Detectar las versiones que puede usar para investigar vulnerabilidades, mediante el comando -sV.
+
+    cisco@labvm:~$ sudo nmap -sV localhost
+    [sudo] password for cisco: 
+    Starting Nmap 7.80 ( https://nmap.org ) at 2022-01-19 13:48 UTC
+    Nmap scan report for localhost (127.0.0.1)
+    Host is up (0.0000020s latency).
+    Other addresses for localhost (not scanned): ::1
+    Not shown: 997 closed ports
+    PORT    STATE SERVICE VERSION
+    22/tcp  open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+    23/tcp  open  telnet  Linux telnetd
+    631/tcp open  ipp     CUPS 2.3
+    Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+    
+    Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+    Nmap done: 1 IP address (1 host up) scanned in 6.45 seco
+
