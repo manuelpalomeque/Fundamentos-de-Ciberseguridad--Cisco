@@ -62,7 +62,38 @@ Vulnerabilidad  en la implementación del Protocolo de impresión de Internet (I
 atacantes remotos causar una denegación de servicio a través de ciertas entradas al puerto IPP (TCP 631).
 Referencias: [ CVE-2003-0788 ] [ BID-8952 ] [SECUNIA-10123]
 
-D) Detectar las versiones que puede usar para investigar vulnerabilidades, mediante el comando -sV.
+## 2) Usar privilegios administrativos con Nmap:
+a) Escanear los puertos UDP de la computadora:
+
+    cisco@labvm:~$ sudo nmap -sU localhost
+    [sudo] password for cisco: 
+    Starting Nmap 7.80 ( https://nmap.org ) at 2022-01-19 14:17 UTC
+    Nmap scan report for localhost (127.0.0.1)
+    Host is up (0.0000020s latency).
+    Other addresses for localhost (not scanned): ::1
+    Not shown: 998 closed ports
+    PORT     STATE         SERVICE
+    631/udp  open|filtered ipp
+    5353/udp open|filtered zeroconf
+    
+    Nmap done: 1 IP address (1 host up) scanned in 1.34 seconds
+
+b)¿Qué puertos UDP están abiertos?
+
+    631/udp  open|filtered ipp
+    5353/udp open|filtered zeroconf
+
+c)Describa el propósito de los servicios UDP asociados con cada puerto.
+
+*631/udp  ipp:* Protocolo de impresión de Internet (IPP), permite la impresión remota desde un PC a cualquier impresora 
+accesible.
+
+*5353/udp  zeroconf:*  Zeroconf o Zero Configuration Networking es un conjunto de técnicas que permiten crear de forma 
+automática una red IP sin configuración o servidores especiales
+
+d)Investigue las vulnerabilidades asociadas con cada uno de estos puertos abiertos.
+
+e) Detectar las versiones que puede usar para investigar vulnerabilidades, mediante el comando -sV.
 
     cisco@labvm:~$ sudo nmap -sV localhost
     [sudo] password for cisco: 
@@ -80,21 +111,6 @@ D) Detectar las versiones que puede usar para investigar vulnerabilidades, media
     Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
     Nmap done: 1 IP address (1 host up) scanned in 6.45 seco
 
-## 2) Usar privilegios administrativos con Nmap:
-a) Escanear los puertos UDP de la computadora:
-
-    cisco@labvm:~$ sudo nmap -sU localhost
-    [sudo] password for cisco: 
-    Starting Nmap 7.80 ( https://nmap.org ) at 2022-01-19 14:17 UTC
-    Nmap scan report for localhost (127.0.0.1)
-    Host is up (0.0000020s latency).
-    Other addresses for localhost (not scanned): ::1
-    Not shown: 998 closed ports
-    PORT     STATE         SERVICE
-    631/udp  open|filtered ipp
-    5353/udp open|filtered zeroconf
-    
-    Nmap done: 1 IP address (1 host up) scanned in 1.34 seconds
 
 
 ## 3) Capturar claves SSH:
