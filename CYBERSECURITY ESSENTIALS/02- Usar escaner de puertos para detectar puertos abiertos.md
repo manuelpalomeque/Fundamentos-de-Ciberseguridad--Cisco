@@ -93,6 +93,17 @@ automática una red IP sin configuración o servidores especiales
 
 d)Investigue las vulnerabilidades asociadas con cada uno de estos puertos abiertos.
 
+*631/udp  ipp:*
+<li>Denegacion de Servicio (DoS)</li>
+
+Ejemplo:
+La implementación del Protocolo de impresión de Internet (IPP) en CUPS antes de 1.1.21 permite a los atacantes remotos causar una denegación de servicio (bloqueo del servicio) a través de un determinado paquete UDP al puerto IPP. Esto se puede aprovechar enviando un datagrama UDP vacío al puerto 631, lo que puede hacer que cupsd deje de escuchar en ese puerto.
+Referencias: [ CVE-2004-0558 ] [SECUNIA-12556]
+
+*5353/udp  zeroconf:* 
+El respondedor de DNS de multidifusión (mDNS) en IBM Security Access Manager para Web 7.x antes de 7.0.0 FP12 y 8.x antes de 8.0.1 FP1 responde inadvertidamente a las consultas de unidifusión con direcciones de origen que no son de enlace local, lo que permite a los atacantes remotos para provocar una denegación de servicio (amplificación del tráfico) u obtener información potencialmente confidencial a través de paquetes UDP del puerto 5353.
+Referencias: [ CVE-2015-1892 ]
+
 e) Detectar las versiones que puede usar para investigar vulnerabilidades, mediante el comando -sV.
 
     cisco@labvm:~$ sudo nmap -sV localhost
