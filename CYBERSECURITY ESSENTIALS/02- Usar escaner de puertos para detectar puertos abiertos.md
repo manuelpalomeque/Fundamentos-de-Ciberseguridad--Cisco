@@ -101,22 +101,35 @@ b)¿Qué puertos UDP están abiertos?
 c)Describa el propósito de los servicios UDP asociados con cada puerto.
 
 *631/udp  ipp:* Protocolo de impresión de Internet (IPP), permite la impresión remota desde un PC a cualquier impresora 
-accesible.
+accesible. El puerto UDP 631 lo utilizan las aplicaciones cliente para los servicios de impresión CUPS.
 
 *5353/udp  zeroconf:*  Zeroconf o Zero Configuration Networking es un conjunto de técnicas que permiten crear de forma 
-automática una red IP sin configuración o servidores especiales
+automática una red IP sin configuración o servidores especiales. El puerto 5353 se usa para descubrir periféricos de 
+red en la red local.
 
 d)Investigue las vulnerabilidades asociadas con cada uno de estos puertos abiertos.
 
 *631/udp  ipp:*
 <li>Denegacion de Servicio (DoS)</li>
 
+Un puerto 631 abierto permite a los atacantes cibernéticos provocar una denegación de servicio y posiblemente ejecutar 
+ataques arbitrarios.
+
 Ejemplo:
 La implementación del Protocolo de impresión de Internet (IPP) en CUPS antes de 1.1.21 permite a los atacantes remotos causar una denegación de servicio (bloqueo del servicio) a través de un determinado paquete UDP al puerto IPP. Esto se puede aprovechar enviando un datagrama UDP vacío al puerto 631, lo que puede hacer que cupsd deje de escuchar en ese puerto.
 Referencias: [ CVE-2004-0558 ] [SECUNIA-12556]
 
 *5353/udp  zeroconf:* 
-El respondedor de DNS de multidifusión (mDNS) en IBM Security Access Manager para Web 7.x antes de 7.0.0 FP12 y 8.x antes de 8.0.1 FP1 responde inadvertidamente a las consultas de unidifusión con direcciones de origen que no son de enlace local, lo que permite a los atacantes remotos para provocar una denegación de servicio (amplificación del tráfico) u obtener información potencialmente confidencial a través de paquetes UDP del puerto 5353.
+El sistema de nombres de dominio de multidifusión (mDNS) utiliza un puerto abierto 5353 que permite a los hosts resolver
+nombres de host a direcciones IP en redes pequeñas que no incluyen un servidor de nombres. Sin embargo, si el
+El puerto mDNS 5353 está expuesto a Internet, los atacantes pueden consultar el servicio para recopilar información.
+sobre el servidor, así como lanzar un ataque DoS falsificando un objetivo e inundando la red con
+solicitudes de mDNS
+
+El respondedor de DNS de multidifusión (mDNS) en IBM Security Access Manager para Web 7.x antes de 7.0.0 FP12 y 8.x 
+antes de 8.0.1 FP1 responde inadvertidamente a las consultas de unidifusión con direcciones de origen que no son de 
+enlace local, lo que permite a los atacantes remotos para provocar una denegación de servicio (amplificación del tráfico)
+u obtener información potencialmente confidencial a través de paquetes UDP del puerto 5353. 
 Referencias: [ CVE-2015-1892 ]
 
 e) Detectar las versiones que puede usar para investigar vulnerabilidades, mediante el comando -sV.
