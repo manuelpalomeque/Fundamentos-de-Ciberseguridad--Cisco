@@ -24,13 +24,16 @@ B) ¿Qué puertos TCP están abiertos?
 C) Proporcione una descripción del servicio asociado con cada puerto abierto.
     
 *22 ssh (Secure Shell):*  sirve para acceder a máquinas remotas a través de una red y manejar por completo el sistema 
-mediante un intérprete de comandos. También podremos copiar datos de forma segura
+mediante un intérprete de comandos. También podremos copiar datos de forma segura. SSH autentica al usuario remoto y 
+usa criptografía para cifrar todo, comunicaciones hacia y desde el servidor remoto.
 
 *23 telnet :*  sirve para establecer conexión remotamente con otro equipo por la línea de comandos y 
 controlarlo. Es un protocolo no seguro ya que la autenticación y todo el tráfico de datos se envía sin cifrar.
 
 *631 ipp (Internet Printing Protocol):*  es un sistema basado en estándares para permitir la impresión remota desde un
-PC a cualquier impresora accesible.
+PC a cualquier impresora accesible. CUPS (Common UNIX Printing System) permite que una computadora actúe como un servidor de impresión. Un sistema 
+que ejecuta CUPS puede aceptar impresiones trabajos de los clientes y envíe los trabajos de impresión a la impresora 
+apropiada. CUPS utiliza IPP (Impresión en Internet).
 
 D) Investigue las vulnerabilidades asociadas con cada uno de estos puertos abiertos.
 
@@ -54,8 +57,20 @@ Referencias: [ XFDB-82650 ], [ BID-58338 ], [ CVE-2012-4702 ]
 <li>Punto de Acceso</li>
 <li>Posibilidad de sniffer</li>
 
+El puerto 23 es inseguro porque los datos transferidos en Texto plano.
+
+Los puertos 22 y 23 permiten a un atacante:
+- Obtener acceso remoto autorizado a un host.
+- Planta puertas traseras y otros tipos de códigos maliciosos.
+- Ver datos confidenciales y credenciales.
+- Realiza ataques man-in-the-middle.
+- Afecta la disponibilidad de otros servicios de host.
+
 *Puerto 631 ipp:*
 <li>Denegacion de Servicio (DoS)</li>
+
+Un usuario no autorizado puede ejecutar comandos arbitrarios con los privilegios de CUPS.
+Además, un DoS remoto puede hacer que el servidor no responda.
 
 Ejemplo:
 Vulnerabilidad  en la implementación del Protocolo de impresión de Internet (IPP) en CUPS antes de 1.1.19 permite a 
