@@ -160,4 +160,13 @@ b)¿Cuáles son los valores de las claves de host SSH?
 
 c)¿Cómo usaría un atacante esta información?
 
+No se recomienda compartir claves de host, ya que puede resultar en una vulnerabilidad a los ataques de intermediarios
+(Man-in-the-middle). Como la clave pública es pública por definición, esto solo tiene fines informativos.
+
 d)¿Cómo podría evitar que el atacante cibernético robe la información clave?
+
+Mediante la gestión de claves de host en SSH: las claves de host protegen contra los ataques de intermediarios (MTM), 
+pero deben administrarse adecuadamente, deben ser únicas para cada servidor, deben cambiarse periódicamente y siempre 
+que se sospeche de un compromiso.
+Los certificados de host (certificados X.509 estándar en Tectia SSH y certificados propietarios en OpenSSH ) 
+son muy útiles para lograr este objetivo.
