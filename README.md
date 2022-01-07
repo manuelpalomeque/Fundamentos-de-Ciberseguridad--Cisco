@@ -11,6 +11,7 @@ Es necesario tener instalado el programa de simulación de redes: Cisco Packet T
 https://skillsforall.com/resources/lab-downloads
 
 ### 👉 CYBERSECURITY ESSENTIALS:
+En la carpeta creada en este repositorio se encuentran desarrollados los siguientes laboratorios:
 
       01- Construir una red doméstica
       02- Use un escáner de puertos para detectar puertos abiertos (NMAP)
