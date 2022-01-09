@@ -92,3 +92,43 @@
         12/31/1969 21:0 PM 649 SWclients.txt 
         12/31/1969 21:0 PM 780 Sclients.txt 
         3889 bytes 6 File(s)
+
+2-1-b)Abrir y copiar el contenido de NEclients.txt:
+
+        Name|Zip Code|Email|Pin #
+        
+        Hannah Caldwell|7624|nec@ligula.net|6111
+        Rhiannon B. Langley|46872|fermentum@cursusnon.co.uk|9781
+        Nigel Ward|3584|convallis.erat.eget@luctusvulputatenisi.org|4896
+        Alvin Farley|69508|lectus@volutpat.co.uk|5358
+        Clark U. Pratt|23441|tincidunt.neque@nisl.co.uk|9273
+        Robin Randall|10108|faucibus.lectus.a@nonarcu.net|4232
+        Stacey L. Kirby|Y4B 8Z5|euismod.enim@mauris.org|4200
+        Joan Pearson|1867VB|convallis.erat@accumsannequeet.net|5002
+        Herman Lambert|09774|vitae.velit.egestas@tinciduntaliquamarcu.com|1220
+        Quentin Blankenship|48315-746|augue@consequat.edu|3387
+
+2-1-f) Utilizae el comando echo -n 'contenido-archivo' | md5 sum  para crear un hash para validar los datos en el archivo
+NEclients.txt
+
+        cisco@labvm:~$ echo -n 'Name|Zip Code|Email|Pin #
+        > 
+        > Hannah Caldwell|7624|nec@ligula.net|6111
+        > Rhiannon B. Langley|46872|fermentum@cursusnon.co.uk|9781
+        > Nigel Ward|3584|convallis.erat.eget@luctusvulputatenisi.org|4896
+        > Alvin Farley|69508|lectus@volutpat.co.uk|5358
+        > Clark U. Pratt|23441|tincidunt.neque@nisl.co.uk|9273
+        > Robin Randall|10108|faucibus.lectus.a@nonarcu.net|4232
+        > Stacey L. Kirby|Y4B 8Z5|euismod.enim@mauris.org|4200
+        > Joan Pearson|1867VB|convallis.erat@accumsannequeet.net|5002
+        > Herman Lambert|09774|vitae.velit.egestas@tinciduntaliquamarcu.com|1220
+        > Quentin Blankenship|48315-746|augue@consequat.edu|3387' | md5sum
+        4dff78485308281b339bfda9236eda45  -
+
+2-1-g) ¿Los dos valores hash para NEclients.txt son iguales?
+
+        FileName | NEclients.txt | Hash| 4dff78485308281b339bfda9236eda45
+        
+        4dff78485308281b339bfda9236eda45
+        
+        Ambos Hash coinciden
