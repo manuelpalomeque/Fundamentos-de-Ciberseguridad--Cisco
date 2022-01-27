@@ -85,6 +85,20 @@ El comando ipconfig no informa la dirección del servidor DNS
                                          10.2.0.125
 
 ¿Cuál es la dirección del servidor DNS? 
+
+    DNS Servers.....................: ::
+                                         10.2.0.125
     
-    DHCP Servers....................: 192.168.50.1
+
+2-b) Completé la siguente tabla con los datos del pc Net-Admin:
+
+    FastEthernet0           |   IP Addressing Information
+    
+    Physical Address        |   0001.C910.22D6
+    Link-local IPv6 Address |   FE80::201:C9FF:FE10:22D6
+    IPv6 Address            |   ::
+    IPv4 Address            |   192.168.99.9
+    Subnet Mask             |   255.255.255.0
+    Default Gateway         |   192.168.99.1
+    DNS Servers             |   10.2.0.125
 
